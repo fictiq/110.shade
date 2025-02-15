@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
 import PixiBlock from "@ui/pixi/block"
+
+import GatorManTest from "@ui/test/GatorManTest"
+
 let dex = 0
 
 let bit;
@@ -25,6 +28,8 @@ export default function EarthlyDecorativeFrame() {
         return (<div>
             
             <PixiBlock bus={setBus}/>
+            <GatorManTest bus={sim} />
+
 
         </div>)
     }

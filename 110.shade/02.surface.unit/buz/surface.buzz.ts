@@ -1,8 +1,9 @@
+
+import { Button, FancyButton } from '@pixi/ui';
 import { SurfaceModel } from "../surface.model";
 import SurfaceBit from "../fce/surface.bit";
 import State from "../../99.core/state";
 import StageBit from "../fce/stage.bit";
-import * as PIXI from "pixi.js";
 
 import { Application, Assets, Container, Sprite } from 'pixi.js';
 
@@ -44,7 +45,7 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
 
     await app.init({ background: '#00FFFF', width, height });
 
-  //  await app.init({ background: '#00FFFF', resizeTo: el.parentElement });
+    //  await app.init({ background: '#00FFFF', resizeTo: el.parentElement });
 
     // Append the application canvas to the document body
 
@@ -71,6 +72,14 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     // Center the bunny sprites in local container coordinates
     //container.pivot.x = container.width / 2;
     //container.pivot.y = container.height / 2;
+
+
+
+
+    
+    //container.addChild( button)
+    //app.stage.addChild( button)
+    //button.onPress.connect(() => console.log('Button pressed!'));
 
 
 
