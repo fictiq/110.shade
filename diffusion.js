@@ -1,4 +1,5 @@
 var FS = require('fs-extra')
+var S = require('string')
 
 const { exec } = require('child_process');
 
@@ -20,19 +21,54 @@ var tmp14 = 'Sleep, 150'
 var tmp15 = 'MouseMove, 1633, 350'
 var tmp16 = 'send {RButton}'
 
+var last0;
+var last1;
+var last2;
 
 var action = () => {
 
     console.log("action")
 
+    if (last0 != null) {
+
+        var lastDirList = FS.readdirSync('../diffusion/outputs/img2img-images/')
+        var lastDir = lastDirList.pop();
+
+        var nowDir =  '../diffusion/outputs/img2img-images/' + lastDir
+        var lastImgList = FS.readdirSync( nowDir)
+        var lastImg = lastImgList.pop()
+
+        if ( S( lastImg ).contains('palettized') == false ) return
+        if ( lastImg.split == null ) return 
+
+        var here = lastImg.split('.').pop()
+
+        var fin = last0 +'-' + last1 + '-' + last2 + '.' + lastImg;
+
+        var input = nowDir + '/' + lastImg;
+        var out = '../artwork/' + fin;
+
+        FS.copyFileSync( input, out)
+        //FS.removeSync( input )
+
+
+    }
+
+
     var images = FS.readdirSync('../image')
 
-    var phrase = ['supernatural', 'political', 'spy' ,'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
-    
+    var phrase = ['supernatural', 'political', 'spy', 'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
+
     var count = [3, 4, 2]
 
-    var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'lizard-skull-gator-man', 'zoggg']
-    var score = [ '0.2703693', '0.4703693', '0.703693',  '0.903693','1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
+    //var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'lizard-skull-gator-man', 'zoggg']
+    var option = ['wheezy-froogzy',  'wheezy-froogzy']
+
+    var option = ['zoggg',  'zoggg']
+    
+    //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
+
+    var score = [ '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
     var Chance = require('chance');
 
@@ -45,11 +81,9 @@ var action = () => {
 
     var boom = ''
 
-    for ( var i = 0; i < round; i++){
-
+    for (var i = 0; i < round; i++) {
         var pop = chance.pickone(phrase)
         boom += pop + ' '
-
     }
 
     var now0 = chance.pickone(option)
@@ -59,6 +93,10 @@ var action = () => {
 
     tmp05 = main + ' ' + now0 + '<lora:' + now0 + ':' + now1 + '>'
     tmp12 = 'Send ' + love
+
+    last0 = now0;
+    last1 = now1;
+    last2 = S(boom).slugify().s;
 
     var list = [tmp00, tmp01, tmp02, tmp03, tmp04, tmp05, tmp06, tmp07, tmp08, tmp09, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16]
 
@@ -73,6 +111,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
+        setTimeout(action, 33000)
     });
 
 
@@ -81,7 +120,7 @@ var action = () => {
 
 
 
-setInterval(action, 60000)
+setTimeout(action, 33000)
 
 
 
