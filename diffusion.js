@@ -43,7 +43,9 @@ var action = () => {
 
         var here = lastImg.split('.').pop()
 
-        var fin = last0 +'-' + last1 + '-' + last2 + '.' + lastImg;
+        const sec = Math.floor(Date.now() / 1000);
+
+        var fin = sec + '.' + last0 +'-' + last1 + '-' + last2 + '.' + lastImg;
 
         var input = nowDir + '/' + lastImg;
         var out = '../artwork/' + fin;
@@ -61,14 +63,13 @@ var action = () => {
 
     var count = [3, 4, 2]
 
-    //var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'lizard-skull-gator-man', 'zoggg']
-    var option = ['wheezy-froogzy',  'wheezy-froogzy']
-
-    var option = ['zoggg',  'zoggg']
+    var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg']
+    
+    //var option = ['eagle-paw-paw-haw',  'eagle-paw-paw-haw']
     
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
-    var score = [ '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
+    var score = [ '1.03693', '1.203693', '1.303693', '1.403693']
 
     var Chance = require('chance');
 
@@ -120,7 +121,7 @@ var action = () => {
 
 
 
-setTimeout(action, 33000)
+setTimeout(action, 13000)
 
 
 

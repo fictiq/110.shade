@@ -30,9 +30,21 @@ var last2;
 
 var action = () => {
 
-    var subject = ['jesus', 'child', 'hacker', 'tyrant', 'victim', 'hunter', 'alligator', 'bee', 'swamp', 'dancer']
+    var subject0 = ['jesus', 'child', 'hacker', 'tyrant', 'victim', 'hunter', 'alligator', 'bee', 'swamp', 'dancer']
+    var subject1 = []
+
+    var subject = FS.readFileSync('./00009.txt').toString().split('\n')
+
+    subject.forEach( (a,b )=>{
+        subject[b] = a.split(':')[1]
+    })
+
     var camera = ['wide shot', 'full body', 'extreme close up', 'close up', 'over the shoulder shot', 'extreme wide angle ', 'Low Angle',  'High Angle', 'Overhead View']
-    var lighting = ['Natural Lighting', 'Diffused Lighting', 'Rim Lighting', 'Neon Side Lighting', 'dark misty', 'before dawn' , 'golden hour', 'mid-day']
+    
+    var lighting0 = ['Natural Lighting', 'Diffused Lighting', 'Rim Lighting', 'Neon Side Lighting', 'dark misty', 'before dawn' , 'golden hour', 'mid-day']
+    var lighting1 = ['Natural sunlight', 'Golden hour glow', 'Blue hour ambiance', 'Studio lighting setup', 'Rembrandt lighting', 'Split light', 'Softbox diffusion', 'Ring light effect' ]
+    const lighting = [...lighting0, ...lighting1];
+    
     var count = [3, 1, 2]
     var phrase = ['supernatural', 'political', 'spy', 'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
     var option = ['chroma key green colored screen',  'chroma key umber colored screen', ,  'chroma key yellow colored screen']
@@ -43,7 +55,7 @@ var action = () => {
     var boom = ' '
 
     for (var i = 0; i < round; i++) {
-        var pop = chance.pickone(phrase)
+        var pop = chance.pickone(subject)
         boom += pop + ' '
     }
 
