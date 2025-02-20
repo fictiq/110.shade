@@ -2,13 +2,15 @@
   "devDependencies": {
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
+    "aedes": "^0.51.3",
+    "async-mqtt": "^2.6.3",
     "buffer": "^6.0.3",
     "fs-extra": "^11.3.0",
     "parcel": "^2.13.3",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "websocket-stream": "^5.5.2"
   },
   "dependencies": {
-    "pixi.js": "^8.7.3",
     "@pixi/ui": "^2.2.0",
     "chance": "^1.1.12",
     "clone-deep": "^4.0.1",
@@ -16,6 +18,7 @@
     "gsap": "^3.12.5",
     "h3-js": "^3.7.2",
     "honeycomb-grid": "^3.1.8",
+    "pixi.js": "^8.7.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rx-lite": "^4.0.8",

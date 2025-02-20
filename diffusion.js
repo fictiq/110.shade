@@ -38,7 +38,7 @@ var action = () => {
         var lastImgList = FS.readdirSync( nowDir)
         var lastImg = lastImgList.pop()
 
-        if ( S( lastImg ).contains('palettized') == false ) return
+        //if ( S( lastImg ).contains('palettized') == false ) return
         if ( lastImg.split == null ) return 
 
         var here = lastImg.split('.').pop()
@@ -57,15 +57,18 @@ var action = () => {
     }
 
 
+
+   var accept =  'masterpiece, blonde assassin woman in winter gear with no hat and no hood , 2020s, anime, screencap, cinematic, ultimate details'
+
     var images = FS.readdirSync('../image')
 
     var phrase = ['supernatural', 'political', 'spy', 'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
 
     var count = [3, 4, 2]
 
-    var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg']
+    //var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw']
     
-    //var option = ['eagle-paw-paw-haw',  'eagle-paw-paw-haw']
+    var option = ['orbie-mayhaw',  'orbie-mayhaw']
     
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
@@ -78,7 +81,7 @@ var action = () => {
 
     var round = chance.pickone(count)
 
-    var love = chance.pickone(images)
+  //  var love = chance.pickone(images)
 
     var boom = ''
 
@@ -93,7 +96,10 @@ var action = () => {
     var main = 'Send ' + boom + ' '
 
     tmp05 = main + ' ' + now0 + '<lora:' + now0 + ':' + now1 + '>'
-    tmp12 = 'Send ' + love
+    //tmp12 = 'Send ' + love
+
+    tmp12 = ' '
+
 
     last0 = now0;
     last1 = now1;
