@@ -61,12 +61,17 @@ var action = () => {
 
     var now0 = chance.pickone(option)
     var now1 = chance.pickone(score)
-    var now2 = chance.pickone(subject)
+    var now2 =  chance.pickone(subject)
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
 
+    now2 = now2.replace(/\r?\n|\r/g, "");
+    boom = boom.replace(/\r?\n|\r/g, "");
 
     tmp02 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
+    
+    tmp02 = tmp02.replace(/\r?\n|\r/g, "");
+
     tmp12 = ''
 
 
@@ -83,7 +88,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 40000)
+        setTimeout(action, 60000)
     });
 
 }
