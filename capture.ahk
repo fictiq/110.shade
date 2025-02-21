@@ -1,17 +1,76 @@
-MouseMove, 178, 325
+MouseMove,  585,  460
+send {LButton}
+sleep, 200
+send {LButton}
+sleep, 200
+send {LButton}
+sleep, 300
 send {RButton}
-Send, ^a
-Sleep, 150
-Send, ^c
-Send masterpiece,  blood , Overhead View , Rembrandt lighting ,  rubbery undefined ,  larry-duck-man , 2020s, anime, screencap, cinematic, ultimate details  0.6303693 larry-duck-man<lora:larry-duck-man:0.6303693>
-MouseMove, 900, 730
+MouseMove,  700,  525
+sleep, 300
+send {LButton}
+MouseMove,  1880,  160
+sleep, 300
+Send {LButton}
+MouseMove,  620,  250
+send {LButton}
+Send {F5}
+sleep, 1000
+MouseMove,  590,  800
+send {LButton}
+sleep, 200
+send {LButton}
+sleep, 200
+sleep, 200
+sleep, 300
 send {RButton}
-Sleep, 150
-MouseMove, 450, 910
+MouseMove,  708,  880
+sleep, 300
+send {LButton}
+MouseMove,  1880,  160
+sleep, 300
+Send {LButton}
+MouseMove,  620,  250
+Send {LButton}
+Send {F5}
+sleep, 1000
+MouseMove,  1100,  480
+send {LButton}
+sleep, 200
+send {LButton}
+sleep, 200
+sleep, 200
+sleep, 200
 send {RButton}
-Sleep, 1550
-Send 2022-04-19-21-56-21-https-playaidungeonio-main-adventureplay-publicid1b78f0c3-65db-42a4-9c1c-1a-da99e74d.png
+MouseMove,  1200,  548
+sleep, 100
+send {LButton}
+MouseMove,  1880,  160
+sleep, 100
+Send {LButton}
+MouseMove,  620,  250
+send {LButton}
+Send {F5}
+sleep, 1000
+MouseMove,  1200,  800
+send {LButton}
+sleep, 200
+send {LButton}
+sleep, 200
+sleep, 200
+sleep, 200
+send {RButton}
+MouseMove,  1320,  870
+sleep, 100
+send {LButton}
+MouseMove,  1880,  160
+sleep, 100
+Send {LButton}
+MouseMove,  620,  250
+send {LButton}
+Send {F5}
+sleep, 3000
+MouseMove,  420,  170
+send {LButton}
+sleep, 200
 SendInput {enter}
-Sleep, 150
-MouseMove, 1633, 350
-send {RButton}
