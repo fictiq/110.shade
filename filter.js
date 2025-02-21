@@ -41,7 +41,7 @@ list.forEach((a, b) => {
     if (jpg == true) { file += '.jpg' }
 
     var input = '../filter/' + a
-    var output = "../image/" + file
+    var output = "../reference/" + file
 
     FS.copyFileSync( input, output)
     FS.removeSync( input )
