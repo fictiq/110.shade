@@ -3,6 +3,19 @@ var S = require('string')
 
 const { exec } = require('child_process');
 
+var tmpAA = 'send {WheelUp 1}'
+var tmpBB = 'send {WheelUp 1}'
+var tmpCC = 'send {WheelUp 1}'
+var tmpDD = 'send {WheelUp 1}'
+var tmpEE = 'send {WheelUp 1}'
+var tmpFF = 'send {WheelUp 1}'
+var tmpGG = 'send {WheelUp 1}'
+var tmpHH = 'send {WheelUp 1}'
+var tmpII = 'send {WheelUp 1}'
+var tmpJJ = 'send {WheelUp 1}'
+var tmpKK = 'send {WheelUp 1}'
+var tmpLL = 'send {WheelUp 1}'
+
 var tmp00 = 'MouseMove, 178, 325'
 var tmp01 = 'send {RButton}'
 var tmp02 = 'Send, ^a'
@@ -20,6 +33,8 @@ var tmp13 = 'SendInput {enter}'
 var tmp14 = 'Sleep, 150'
 var tmp15 = 'MouseMove, 1633, 350'
 var tmp16 = 'send {RButton}'
+
+
 
 var last0;
 var last1;
@@ -114,13 +129,13 @@ var action = () => {
     var now4 = chance.pickone(lighting)
     var now5 = chance.pickone(color)
 
+    if ( now2 != null ){
+        now2 = now2.replace(/\r?\n|\r/g, "");
+    }
     
-    now2 = now2.replace(/\r?\n|\r/g, "");
     boom = boom.replace(/\r?\n|\r/g, "");
 
     var main = 'Send ' + boom + ' '
-
-    
     tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
     
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
@@ -129,13 +144,11 @@ var action = () => {
     tmp12 = 'Send ' + love
 
     //tmp12 = ' '
-
-
     last0 = now0;
     last1 = now1;
     last2 = S(boom).slugify().s;
 
-    var list = [tmp00, tmp01, tmp02, tmp03, tmp04, tmp05, tmp06, tmp07, tmp08, tmp09, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16]
+    var list = [ tmpAA, tmpBB, tmpCC, tmpDD, tmpEE, tmp00, tmp01, tmp02, tmp03, tmp04, tmp05, tmp06, tmp07, tmp08, tmp09, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16 ]
 
     var output = list.join('\n')
 
