@@ -7,6 +7,9 @@ var chance = new Chance();
 const { exec } = require('child_process');
 
 //FIRST IMAGE
+var tmpAA = 'Send {F5}'
+var tmpBB = 'sleep, 6000'
+
 var tmp00 = 'MouseMove,  585,  460'
 var tmp01 = 'send {LButton}'
 var tmp02 = 'sleep, 200'
@@ -16,15 +19,15 @@ var tmp05 = 'send {LButton}'
 var tmp06 = 'sleep, 300'
 var tmp07 = 'send {RButton}'
 var tmp08 = 'MouseMove,  700,  525'
-var tmp09 = 'sleep, 300'
-var tmp10 = 'send {LButton}'
+var tmp09 = 'send {LButton}'
+var tmp10 = 'sleep, 6000'
 var tmp11 = 'MouseMove,  1880,  160'
 var tmp12 = 'sleep, 300'
 var tmp13 = 'Send {LButton}'
 var tmp14 = 'MouseMove,  620,  250'
 var tmp15 = 'send {LButton}'
 var tmp16 = 'Send {F5}'
-var tmp17 = 'sleep, 1000'
+var tmp17 = 'sleep, 6000'
 
 //SECOND IMAGE
 var tmp18 = 'MouseMove,  590,  800'
@@ -32,19 +35,19 @@ var tmp19 = 'send {LButton}'
 var tmp20 = 'sleep, 200'
 var tmp21 = 'send {LButton}'
 var tmp22 = 'sleep, 200'
-var tmp23 = 'sleep, 200'
+var tmp23 = 'send {LButton}'
 var tmp24 = 'sleep, 300'
 var tmp25 = 'send {RButton}'
 var tmp26 = 'MouseMove,  708,  880'
-var tmp27 = 'sleep, 300'
-var tmp28 = 'send {LButton}'
+var tmp27 = 'send {LButton}'
+var tmp28 = 'sleep, 6000'
 var tmp29 = 'MouseMove,  1880,  160'
 var tmp30 = 'sleep, 300'
 var tmp31 = 'Send {LButton}'
 var tmp32 = 'MouseMove,  620,  250'
 var tmp33 = 'Send {LButton}'
 var tmp34 = 'Send {F5}'
-var tmp35 = 'sleep, 1000'
+var tmp35 = 'sleep, 6000'
 
 
 //THIRD IMAGE
@@ -53,19 +56,19 @@ var tmp37 = 'send {LButton}'
 var tmp38 = 'sleep, 200'
 var tmp39 = 'send {LButton}'
 var tmp40 = 'sleep, 200'
-var tmp41 = 'sleep, 200'
+var tmp41 = 'send {LButton}'
 var tmp42 = 'sleep, 200'
 var tmp43 = 'send {RButton}'
 var tmp44 = 'MouseMove,  1200,  548'
-var tmp45 = 'sleep, 100'
-var tmp46 = 'send {LButton}'
+var tmp45 = 'send {LButton}'
+var tmp46 = 'sleep, 6000' 
 var tmp47 = 'MouseMove,  1880,  160'
 var tmp48 = 'sleep, 100'
 var tmp49 = 'Send {LButton}'
 var tmp50 = 'MouseMove,  620,  250'
 var tmp51 = 'send {LButton}'
 var tmp52 = 'Send {F5}'
-var tmp53 = 'sleep, 1000'
+var tmp53 = 'sleep, 6000'
 
 
 
@@ -75,19 +78,19 @@ var tmp55 = 'send {LButton}'
 var tmp56 = 'sleep, 200'
 var tmp57 = 'send {LButton}'
 var tmp58 = 'sleep, 200'
-var tmp59 = 'sleep, 200'
+var tmp59 = 'send {LButton}'
 var tmp60 = 'sleep, 200'
 var tmp61 = 'send {RButton}'
 var tmp62 = 'MouseMove,  1320,  870'
-var tmp63 = 'sleep, 100'
-var tmp64 = 'send {LButton}'
+var tmp63 = 'send {LButton}'
+var tmp64 = 'sleep, 6000'
 var tmp65 = 'MouseMove,  1880,  160'
 var tmp66 = 'sleep, 100'
 var tmp67 = 'Send {LButton}'
 var tmp68 = 'MouseMove,  620,  250'
 var tmp69 = 'send {LButton}'
-var tmp70 = 'Send {F5}'
-var tmp71 = 'sleep, 3000'
+var tmp70 = 'sleep, 1000'
+var tmp71 = 'sleep, 1000'
 
 
 var tmp72 = 'MouseMove,  420,  170'
@@ -134,7 +137,9 @@ var action = () => {
     var now1 = chance.pickone(score)
     
     var now2 =  chance.pickone(subject)
-    //now2 = 'swamp mosquito'
+    
+    // if you want more control
+    now2 = 'toothy moby whale alligator'
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
@@ -151,7 +156,7 @@ var action = () => {
 
     //tmp12 = ''
 
-    var pix1 = [tmp00, tmp01, tmp02, tmp03, tmp04, tmp05, tmp06, tmp07, tmp08, tmp09, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17]
+    var pix1 = [tmpAA, tmpBB, tmp00, tmp01, tmp02, tmp03, tmp04, tmp05, tmp06, tmp07, tmp08, tmp09, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17]
     var pix2 = [tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35]
     var pix3 = [tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53]
     var pix4 = [tmp54, tmp55, tmp56, tmp57, tmp58, tmp59, tmp60, tmp61, tmp62, tmp63, tmp64, tmp65, tmp66, tmp67, tmp68, tmp69, tmp70, tmp71]
@@ -175,7 +180,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 60000)
+        setTimeout(action, 70000)
     });
 
 }
