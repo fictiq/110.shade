@@ -1,5 +1,5 @@
-var FS = ('fs-extra')
-var S = ('string')
+var FS = require( 'fs-extra')
+var S = require('string')
 
 var exec = require('child_process').exec;
 
@@ -26,18 +26,24 @@ exec('tsc -b 110.shade', async (err, stdout, stderr) => {
         //bit = await ste.bus(ActDsk.WRITE_DISK, { src: './002.bundle-pivot.bat', dat: template })
         //bit = await ste.bus(ActDsk.BATCH_DISK, { src: '002.bundle-pivot.bat' })
 
-        var list = FS.readSync('./work/110.shade.js').toString().split('\n')
+
+        var list = FS.readFileSync('./work/110.shade.js',{encoding:'utf8'}).toString().split('\n');
+
+        var check = ''
 
         var output = []
 
-        list.forEach( (a)=>{
-            var check = S( a ).contains( '_globals = (function(){ return this || (0,eval)("this"); }());'  ) .s
-            if ( check == true ) return 
-            output.push( a )
+        list.forEach( (a, b)=>{
+
+            if ( a.includes('_globals = (function(){ return this || (0,eval)("this"); }());') == true ) {
+                list[b] = ''
+                console.log(a)
+            }
+
         })
-
-        fs.writeSync( './work/110.shade.js', output.join('\n') )
-
+        
+        //list = S( list ).replaceAll( , '').s
+        FS.writeFileSync( './work/110.shade.js', list.join('\n') )
         console.log('fin 110.shade')
 
     });

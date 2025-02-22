@@ -52,7 +52,7 @@ var eveiefy = () => {
   FS.ensureFileSync(endLoc);
   console.log("bundle me ... " + endLoc)
 
-  var stream = FS.createWriteStream(endLoc);
+  var stream = FS.createWriteStream(endLoc, {encoding:'utf8'});
   stream.on("error", () => {
     console.log("error browserify stream");
   });

@@ -136,10 +136,10 @@ var action = () => {
     var now0 = chance.pickone(option)
     var now1 = chance.pickone(score)
     
-    var now2 =  chance.pickone(subject)
+    var now2 = 'swampy '+  chance.pickone(subject)
     
     // if you want more control
-    now2 = 'toothy moby whale alligator'
+    now2 = 'swamp frankenstein'
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
@@ -180,7 +180,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 70000)
+        setTimeout(action, 170306)
     });
 
 }

@@ -13737,7 +13737,7 @@ module.exports = setup;
 		};
 	};
 
-	_globals = (function(){ return this || (0,eval)("this"); }());
+
 
 	/* istanbul ignore else */
 	if (typeof module !== "undefined" && module.exports) {
