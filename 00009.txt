@@ -268,10 +268,6 @@ be:overlight Flow
 be:render
 be:Felicifus Calculus 
 be:Kevin Equals Rooster
-hacker: billy-fae-bots, lactavous mcjustin, pantone uler
-hacker: Aviatrix click, fused buck up, frictional deprevation
-hacker: yancey fancey, yancey chancey, soren soarson
-hacker: aperiocity chill, sequenomn, binocular parralax
 hacker: zero-hero
 be:coder
 be:hacker 
@@ -289,40 +285,52 @@ be:critic
 be:dancer
 be:musician 
 be:architect
+be:artist
+be:robot
+be:church: 
+be: hallow
+be: vital principle
+be: prayator
+be: government 
+be: ar-15
+be: m-16, 
+be: thinker 
+be: execute 
+be: pistol grip whip
+be: eagle harpy 
+be: master sprayer
+be: Warden Man
+be: Ryan David
+be: Cruicial Pincers
+be :criminal: Poucher Bot
+be :Duran Turan
+be: Shock Youth
 
-
-artist:saul-saint-nikadimus, spooge, , corona click
-artist:dorian red, jive doings, johnny walkman
-artist:celebritisaurus rex, DZR, alyissa montealeo
-artist:elliot bradly, middle finger, greasy fart
-artist:Exes En Oooos, arab
-artist: mary fatback, smear merchant, big booty judy 
-artist: massimo moorri, Yung Yung Yaaaa, Victor Sharon
-artist: Nick Yoho, Victoria Shamrock, Nikkki klover, Yung wang coo
-artist: adince louvin 
-
-robot: 14-K Gadget, Spider Bot, src 1414
-
-church: art hallow, vital principle, prayator
-
-government: ar-15, m-16, thinker execute, pistol grip whip, eagle harpy 
-government: master sprayer, Warden Man, Ryan David, Cruicial Pincers
-
-criminal: Poucher Bot, Duran Turan, Shock Youth
-
-dixxxxie_lixxxxian: raven rock, black thorne, bonnie bluff, carly marbles 
-dixxxxie_lixxxxian: wildcat, Quaigbait, Little Jimmie Dickson, Pulpwood
-dixxxxie_lixxxxian: Swamp stomper, Greasy Galloon, Orbie Mayhaw
-dixxxxie_lixxxxian: Dangote Sage, Potash Bile, theidocidy jones
-dixxxxie_lixxxxian: theidocidy jones, iron head Galloon, shinola tieus 
-dixxxxie_lixxxxian: poor piss, puss pack, throat punch, rc spurl 
-dixxxxie_lixxxxian: slim pickins
-
-bundead: maximon
-
-apis-hori:reebeeka-beeing 
-
-family: speeder spider, mother queen. father king, Golden Child
+be: raven rock, 
+be: black thorne
+be: bonnie bluff 
+be : carly marbles 
+be : wildcat
+be : Quaigbait
+be: Little Jimmie Dickson
+be: Pulpwood
+be : Swamp stomper
+be : Potash Bile
+be : iron head Galloon, 
+be: shinola  
+be: poor piss
+be: puss pack
+be: throat punch
+be: slim pickins
+be: bundead
+be: maximon
+be: apis-hori
+be: reebeeka-beeing 
+be: family
+be: speeder spider 
+be: mother queen
+be :father king
+be: Golden Child
  
 saurian: sun-eater, rexxxx-lexxxx, hard heart, rot wool, rexxxxie lexxxxie
 saurian: Orchid Stretch, Snake Crotch, Kissing Games, Rising Beauty, Lizard Skull
@@ -336,6 +344,7 @@ intellegence of 79: wad odd, kbar
 supernal: fusilini gorithmm, oddwad ocitvious, astrail Wild 
 supernal: Sefer Yetziarh, Cingulate Gyrus, triton arcage 
 supernal: cyclopean anaglyph
+
 
 gator: coots, orange blossom, car claw, ditty wack, ditty back
 gator: swamp chomp, Goober, Little Bitty, Pretty Thing, Bartlett Pear
