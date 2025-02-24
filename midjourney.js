@@ -109,9 +109,14 @@ var action = () => {
 
     var subject = FS.readFileSync('./00009.txt').toString().split('\n')
 
-    subject.forEach( (a,b )=>{
-        subject[b] = a.split(':')[1]
-    })
+    var subject = ['deity', 'Divinity', 'mythical', 'immortal', 'Ancient', 'Saint', 'Quetzalcoatl']
+    var subject = ['ostentation', 'gassy ostentation', 'fierce ostentation', 'mythical ostentation', 'immortal ostentation', 'Ancient ostentation', 'swampy ostentation', 'dusty ostentation']
+
+    
+
+    //subject.forEach( (a,b )=>{
+     //   subject[b] = a.split(':')[1]
+    //})
 
     var camera = ['wide shot', 'full body', 'extreme close up', 'close up', 'over the shoulder shot', 'extreme wide angle ', 'Low Angle',  'High Angle', 'Overhead View']
     
@@ -136,10 +141,10 @@ var action = () => {
     var now0 = chance.pickone(option)
     var now1 = chance.pickone(score)
     
-    var now2 = 'swampy '+  chance.pickone(subject)
+    var now2 = chance.pickone(subject)
     
     // if you want more control
-    now2 = 'swamp frankenstein'
+    now2 = 'ostentation weapon'
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
@@ -180,7 +185,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 170306)
+        setTimeout(action, 70306)
     });
 
 }
