@@ -63,19 +63,16 @@ var action = () => {
 
     var phrase = ['supernatural', 'political', 'spy', 'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
 
-    var subject = FS.readFileSync('./00009.txt').toString().split('\n')
+    var subject = FS.readFileSync('./data/subject.txt').toString().split('\n')
 
     subject.forEach((a, b) => {
         subject[b] = a.split(':')[1]
     })
 
-    var camera = ['wide shot', 'full body', 'extreme close up', 'close up', 'over the shoulder shot', 'extreme wide angle ', 'Low Angle', 'High Angle', 'Overhead View']
+    const camera = FS.readFileSync('./data/camera.txt').toString().split('\n')
+    const lighting = FS.readFileSync('./data/light.txt').toString().split('\n')
+    const color = FS.readFileSync('./data/color.txt').toString().split('\n')
 
-    var lighting0 = ['Natural Lighting', 'Diffused Lighting', 'Rim Lighting', 'Neon Side Lighting', 'dark misty', 'before dawn', 'golden hour', 'mid-day']
-    var lighting1 = ['Natural sunlight', 'Golden hour glow', 'Blue hour ambiance', 'Studio lighting setup', 'Rembrandt lighting', 'Split light', 'Softbox diffusion', 'Ring light effect']
-    const lighting = [...lighting0, ...lighting1];
-
-    var color = ['chroma key green colored screen', 'chroma key umber colored screen', , 'chroma key yellow colored screen']
 
     var count = [3, 4, 2]
 
@@ -89,7 +86,7 @@ var action = () => {
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
-    var score = ['1.03693', '1.203693', '1.303693', '1.403693', '0.93693', '0.8203693', '1.6303693', '0.70403693']
+    var score = ['1.03693', '1.203693', '1.303693', '1.403693', '0.93693', '0.8203693', '1.46303693', '0.70403693']
 
     var Chance = require('chance');
 

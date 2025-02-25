@@ -1,5 +1,4 @@
 detail : tree-lined
-nature : 
 hacker-painter
 beat : wardriving
 beat : scrubbing
@@ -48,7 +47,6 @@ object : woodsman
 object : quaesitor
 object : waterline
 object : trans-oceanics
-object : 
 title : guardian
 title : hollywood
 title : aeronautics
@@ -120,7 +118,7 @@ detail : tree-lined
 beat : chattering
 object : warehouse
 detail : fossilized
-unscathed
+detail : unscathed
 detail : neolithic
 detail : rudimentary
 detail : horrible
@@ -331,21 +329,52 @@ be: speeder spider
 be: mother queen
 be :father king
 be: Golden Child
- 
-saurian: sun-eater, rexxxx-lexxxx, hard heart, rot wool, rexxxxie lexxxxie
-saurian: Orchid Stretch, Snake Crotch, Kissing Games, Rising Beauty, Lizard Skull
-saurian: Prey Station, Cheeta Blossom, beastiari boom, misero
+be : saurian 
+be : sun-eater
+be : rexxxx-lexxxx 
+be :hard heart 
+be : rot wool 
+be : rexxxxie lexxxxie
+be : Orchid Stretch, 
+be :Snake Crotch, 
+be :Kissing Games
+be : Rising Beauty, 
+be : Lizard Skull
 
-mass media: janky boonanky, heart flash
+be : Prey Station
+be : Cheeta Blossom, 
+be : beastiari boom
+be : misero
 
-intellegence of 68: jabo, hope, odd wad
-intellegence of 79: wad odd, kbar
+be : mass media
+be : janky 
+be : heart flash
 
-supernal: fusilini gorithmm, oddwad ocitvious, astrail Wild 
-supernal: Sefer Yetziarh, Cingulate Gyrus, triton arcage 
-supernal: cyclopean anaglyph
+be : intellegence of 68 
+be : jabo 
+be : hope 
+be : odd wad
+be : intellegence of 79
+be : wad odd
+be : kbabr
 
+be : supernal
+be : fusilini gorithmm
 
-gator: coots, orange blossom, car claw, ditty wack, ditty back
-gator: swamp chomp, Goober, Little Bitty, Pretty Thing, Bartlett Pear
-gator: Blue Corn, Purple Candy,Green Hornet, Blood Orange, Cadmium Red Deep, Flight Jacket
+be : gator
+be :  coots, 
+be : orange blossom
+be : car claw,
+be: ditty wack
+be:  ditty back
+be : swamp chomp, 
+be :Goober, 
+be : Little Bitty, 
+be :Pretty Thing
+be : Bartlett Pear
+be : Blue Corn
+be : Purple Candy
+be : Green Hornet
+be : Blood Orange
+be : Cadmium Red Deep
+be : Flight Jacket
