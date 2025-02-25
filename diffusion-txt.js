@@ -81,7 +81,7 @@ var action = () => {
 
     var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw']
 
-    var option = ['frankenthroat-punch-pusspack', 'frankenthroat-punch-pusspack']
+    var option = ['okeenokeeswamp-trentabmit', 'okeenokeeswamp-trentabmit']
 
 
 
@@ -89,7 +89,7 @@ var action = () => {
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
-    var score = ['1.03693', '1.203693', '1.303693', '1.403693', '0.3693', '0.203693', '0.6303693', '0.0403693']
+    var score = ['1.03693', '1.203693', '1.303693', '1.403693', '0.93693', '0.8203693', '1.6303693', '0.70403693']
 
     var Chance = require('chance');
 
