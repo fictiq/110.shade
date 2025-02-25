@@ -107,10 +107,14 @@ var action = () => {
     var subject0 = ['jesus', 'child', 'hacker', 'tyrant', 'victim', 'hunter', 'alligator', 'bee', 'swamp', 'dancer']
     var subject1 = []
 
-    var subject = FS.readFileSync('./00009.txt').toString().split('\n')
+    var form = FS.readFileSync('./00009.txt').toString().split('\n')
 
-    subject.forEach( (a,b )=>{
-        subject[b] = a.split(':')[1]
+    var subject = ['deity', 'Divinity', 'mythical', 'immortal', 'Ancient', 'Saint', 'Quetzalcoatl']
+    var subject = ['ostentation', 'gassy ostentation', 'fierce ostentation', 'mythical ostentation', 'immortal ostentation', 'Ancient ostentation', 'swampy ostentation', 'dusty ostentation']
+
+    
+    form.forEach( (a,b )=>{
+        form[b] = a.split(':')[1]
     })
 
     var camera = ['wide shot', 'full body', 'extreme close up', 'close up', 'over the shoulder shot', 'extreme wide angle ', 'Low Angle',  'High Angle', 'Overhead View']
@@ -136,13 +140,14 @@ var action = () => {
     var now0 = chance.pickone(option)
     var now1 = chance.pickone(score)
     
-    var now2 = 'swampy '+  chance.pickone(subject)
+    var now2 = chance.pickone(subject)
     
     // if you want more control
-    now2 = 'swamp frankenstein'
+    now2 = 'ostentatious opulent swamp'
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
+    var now5 = chance.pickone(form)
 
     if ( now2 != null && now2.replace != null){
         now2 = now2.replace(/\r?\n|\r/g, "");
@@ -151,7 +156,7 @@ var action = () => {
   
     boom = boom.replace(/\r?\n|\r/g, "");
 
-    tmp74 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
+    tmp74 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , ' + now5 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
     tmp74 = tmp74.replace(/\r?\n|\r/g, "");
 
     //tmp12 = ''
@@ -180,7 +185,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 170306)
+        setTimeout(action, 70306)
     });
 
 }
