@@ -1,0 +1,10 @@
+export declare const initTest: (cpy: TestModel, bal: TestBit, ste: State) => TestModel;
+export declare const updateTest: (cpy: TestModel, bal: TestBit, ste: State) => TestModel;
+export declare const autoTest: (cpy: TestModel, bal: TestBit, ste: State) => TestModel;
+export declare const fetchTest: (cpy: TestModel, bal: TestBit, ste: State) => TestModel;
+export declare const readTest: (cpy: TestModel, bal: TestBit, ste: State) => Promise<TestModel>;
+export declare const writeTest: (cpy: TestModel, bal: TestBit, ste: State) => Promise<TestModel>;
+export declare const createTest: (cpy: TestModel, bal: TestBit, ste: State) => Promise<TestModel>;
+import { TestModel } from "../test.model";
+import TestBit from "../fce/test.bit";
+import State from "../../99.core/state";

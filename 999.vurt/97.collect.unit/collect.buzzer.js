@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.removeCollect = exports.deleteCollect = exports.fetchCollect = exports.emptyCollect = exports.createCollect = exports.writeCollect = exports.readCollect = exports.updateCollect = exports.initCollect = void 0;
+var collect_buzz_1 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "initCollect", { enumerable: true, get: function () { return collect_buzz_1.initCollect; } });
+var collect_buzz_2 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "updateCollect", { enumerable: true, get: function () { return collect_buzz_2.updateCollect; } });
+var collect_buzz_3 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "readCollect", { enumerable: true, get: function () { return collect_buzz_3.readCollect; } });
+var collect_buzz_4 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "writeCollect", { enumerable: true, get: function () { return collect_buzz_4.writeCollect; } });
+var collect_buzz_5 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "createCollect", { enumerable: true, get: function () { return collect_buzz_5.createCollect; } });
+var collect_buzz_6 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "emptyCollect", { enumerable: true, get: function () { return collect_buzz_6.emptyCollect; } });
+var collect_buzz_7 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "fetchCollect", { enumerable: true, get: function () { return collect_buzz_7.fetchCollect; } });
+var collect_buzz_8 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "deleteCollect", { enumerable: true, get: function () { return collect_buzz_8.deleteCollect; } });
+var collect_buzz_9 = require("./buz/collect.buzz");
+Object.defineProperty(exports, "removeCollect", { enumerable: true, get: function () { return collect_buzz_9.removeCollect; } });
+//# sourceMappingURL=collect.buzzer.js.map

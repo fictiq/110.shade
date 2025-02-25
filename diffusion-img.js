@@ -19,18 +19,18 @@ var tmpLL = 'send {WheelUp 1}'
 var tmp00 = 'MouseMove, 178, 325'
 var tmp01 = 'send {RButton}'
 var tmp02 = 'Send, ^a'
-var tmp03 = 'Sleep, 150'
+var tmp03 = 'Sleep, 1500'
 var tmp04 = 'Send, ^c'
 var tmp05 = 'Send supernatural political spy thriller lizard-skull-gator-man<lora:lizard-skull-gator-man:1.703693> '
-var tmp06 = 'MouseMove, 900, 730'
+var tmp06 = 'MouseMove, 898, 732'
 var tmp07 = 'send {RButton}'
-var tmp08 = 'Sleep, 150'
+var tmp08 = 'Sleep, 1500'
 var tmp09 = 'MouseMove, 450, 910'
 var tmp10 = 'send {RButton}'
 var tmp11 = 'Sleep, 1550'
 var tmp12 = 'Send 00000 '
 var tmp13 = 'SendInput {enter}'
-var tmp14 = 'Sleep, 150'
+var tmp14 = 'Sleep, 1500'
 var tmp15 = 'MouseMove, 1633, 350'
 var tmp16 = 'send {RButton}'
 
@@ -103,9 +103,8 @@ var action = () => {
 
     var count = [3, 4, 2]
 
-    var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw']
-
-    var option = ['gaza-the-gazarian', 'gaza-the-gazarian']
+    var option0 = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw',  'frankenthroat-punch-pusspack', 'purehearttedcattlin']
+    var option = [ 'purehearttedcattlin' , 'purehearttedcattlin']
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
@@ -127,6 +126,8 @@ var action = () => {
         boom += pop + ' '
     }
 
+    var nowAA = chance.pickone( option0)
+    var nowBB = chance.pickone( option0 )
     var now0 = chance.pickone(option)
     var now1 = chance.pickone(score)
 
@@ -146,7 +147,12 @@ var action = () => {
 
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
 
-    tmp05 += ' ' + now0 + '<lora:' + now0 + ':' + now1 + '>'
+    tmp05 += ' ' + now0 + '<lora:' + now0 + ':' + chance.pickone(score) + '>'
+    //tmp05 += ' ' + '<lora:' + nowAA + ':' + chance.pickone(score) + '>'
+    //tmp05 += ' ' + '<lora:' + nowBB + ':' + chance.pickone(score) + '>'
+    
+    
+    
     tmp12 = 'Send ' + love
 
     //tmp12 = ' '
@@ -167,7 +173,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 60000 * 5 + 55000)
+        setTimeout(action, 60000 * 5 + 65000)
     });
 
 }

@@ -17,7 +17,7 @@ import * as ActGph from "../../04.graphic.unit/graphic.action";
 import * as ActTxt from "../../05.text.unit/text.action";
 import * as ActSpr from "../../06.sprite.unit/sprite.action";
 import * as ActHex from "../../07.hexagon.unit/hexagon.action";
-import * as ActVsg from "../../01.visage.unit/visage.action";
+import * as ActVsg from "../../21.visage.unit/visage.action";
 
 var bit, val, idx, dex, lst, dat;
 

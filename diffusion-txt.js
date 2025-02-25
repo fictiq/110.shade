@@ -81,7 +81,11 @@ var action = () => {
 
     var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw']
 
-    //var option = ['orbie-mayhaw', 'orbie-mayhaw']
+    var option = ['frankenthroat-punch-pusspack', 'frankenthroat-punch-pusspack']
+
+
+
+
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 

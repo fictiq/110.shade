@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@pixi/ui": "^2.2.0",
+    "babylonjs": "^7.50.0",
     "browserify": "^17.0.1",
     "chance": "^1.1.12",
     "clone-deep": "^4.0.1",

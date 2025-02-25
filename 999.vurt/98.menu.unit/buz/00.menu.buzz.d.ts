@@ -1,0 +1,12 @@
+export declare const initMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<MenuModel>;
+export declare const updateMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<MenuModel>;
+export declare const vurtMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<void>;
+export declare const unitMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<MenuModel>;
+export declare const diskMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<void>;
+export declare const workerMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<void>;
+export declare const testMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<MenuModel>;
+export declare const countMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<MenuModel>;
+export declare const closeMenu: (cpy: MenuModel, bal: MenuBit, ste: State) => Promise<MenuModel>;
+import { MenuModel } from "../menu.model";
+import MenuBit from "../fce/menu.bit";
+import State from "../../99.core/state";
