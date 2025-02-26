@@ -107,21 +107,18 @@ var action = () => {
     var subject0 = ['jesus', 'child', 'hacker', 'tyrant', 'victim', 'hunter', 'alligator', 'bee', 'swamp', 'dancer']
     var subject1 = []
 
-    var form = FS.readFileSync('./00009.txt').toString().split('\n')
-
-    var subject = ['deity', 'Divinity', 'mythical', 'immortal', 'Ancient', 'Saint', 'Quetzalcoatl']
-    var subject = ['ostentation', 'gassy ostentation', 'fierce ostentation', 'mythical ostentation', 'immortal ostentation', 'Ancient ostentation', 'swampy ostentation', 'dusty ostentation']
-
+    var subject = FS.readFileSync('./data/subject.txt').toString().split('\n')
     
-    form.forEach( (a,b )=>{
-        form[b] = a.split(':')[1]
+    subject.forEach( (a,b )=>{
+        subject[b] = a.split(':')[1]
     })
 
-    var camera = ['wide shot', 'full body', 'extreme close up', 'close up', 'over the shoulder shot', 'extreme wide angle ', 'Low Angle',  'High Angle', 'Overhead View']
+    const camera = FS.readFileSync('./data/camera.txt').toString().split('\n')
+    const lighting = FS.readFileSync('./data/light.txt').toString().split('\n')
+    const color = FS.readFileSync('./data/color.txt').toString().split('\n')
+    const genre = FS.readFileSync('./data/genre.txt').toString().split('\n')
+    const flavor = FS.readFileSync('./data/flavor.txt').toString().split('\n')
     
-    var lighting0 = ['Natural Lighting', 'Diffused Lighting', 'Rim Lighting', 'Neon Side Lighting', 'dark misty', 'before dawn' , 'golden hour', 'mid-day']
-    var lighting1 = ['Natural sunlight', 'Golden hour glow', 'Blue hour ambiance', 'Studio lighting setup', 'Rembrandt lighting', 'Split light', 'Softbox diffusion', 'Ring light effect' ]
-    const lighting = [...lighting0, ...lighting1];
     
     var count = [3, 1, 2]
     var phrase = ['supernatural', 'political', 'spy', 'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
@@ -137,9 +134,8 @@ var action = () => {
         boom += pop + ' '
     }
 
-    var now0 = chance.pickone(option)
-    var now1 = chance.pickone(score)
-    
+    var now0 = chance.pickone(color)
+    var now1 = chance.pickone(score)    
     var now2 = chance.pickone(subject)
     
     // if you want more control
@@ -147,7 +143,9 @@ var action = () => {
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
-    var now5 = chance.pickone(form)
+    var now5 = chance.pickone(subject)
+    var now6 = chance.pickone(genre)
+    var now7 = chance.pickone(flavor)
 
     if ( now2 != null && now2.replace != null){
         now2 = now2.replace(/\r?\n|\r/g, "");
@@ -156,7 +154,7 @@ var action = () => {
   
     boom = boom.replace(/\r?\n|\r/g, "");
 
-    tmp74 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , ' + now5 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
+    tmp74 = 'Send masterpiece, ' + now7 + ' ' + now2 + ' , '  + now6 + ' , ' + now3 + ' , ' + now4 + ' , ' + now5 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
     tmp74 = tmp74.replace(/\r?\n|\r/g, "");
 
     //tmp12 = ''

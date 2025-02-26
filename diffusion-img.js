@@ -22,7 +22,7 @@ var tmp02 = 'Send, ^a'
 var tmp03 = 'Sleep, 1500'
 var tmp04 = 'Send, ^c'
 var tmp05 = 'Send supernatural political spy thriller lizard-skull-gator-man<lora:lizard-skull-gator-man:1.703693> '
-var tmp06 = 'MouseMove, 898, 732'
+var tmp06 = 'MouseMove, 895, 790'
 var tmp07 = 'send {RButton}'
 var tmp08 = 'Sleep, 1500'
 var tmp09 = 'MouseMove, 450, 910'
@@ -79,36 +79,26 @@ var action = () => {
 
     var phrase = ['supernatural', 'political', 'spy', 'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
 
-    var subject = FS.readFileSync('./00009.txt').toString().split('\n')
+    var subject = FS.readFileSync('./data/subject.txt').toString().split('\n')
 
     subject.forEach((a, b) => {
         subject[b] = a.split(':')[1]
     })
 
-    var camera0 = ['wide shot', 'full body', 'extreme close up', 'close up', 'over the shoulder shot', 'extreme wide angle ', 'Low Angle', 'High Angle', 'Overhead View']
-    var camera1 = ['Low Angle Shot', 'High Angle Shot', 'Close-Up Shot', "Bird's-Eye View", 'Eye-Level Shot', 'Dutch Angle', 'Ground Level', 'Waist Level Shots', 'Establishing Shot', 'Full Shot', 'three-quarters shot']
-    var camera = [...camera0, ...camera1]
-
-    var lighting0 = ['Natural Lighting', 'Diffused Lighting', 'Rim Lighting', 'Neon Side Lighting', 'dark misty', 'before dawn', 'golden hour', 'mid-day']
-    var lighting1 = ['Natural sunlight', 'Golden hour glow', 'Blue hour ambiance', 'Studio lighting setup', 'Rembrandt lighting', 'Split light', 'Softbox diffusion', 'Ring light effect']
-    var lighting2 = ['Cinematic split', 'Abstract shadow patterns', 'Soft shadows/Harsh shadows', 'Colorful shadows', 'Double exposure with shadows', 'Rim light', 'Backlit', 'Diffused lighting', 'Dimly lit', 'Light overexposure']
-    var lighting3 = ['Crystal', 'Glasses, mirror, car window', 'Caustics', 'Refraction effect', 'Subsurface Scattering', 'Reflective raindrops', 'Metal surfaces', 'glass table reflection']
-    var lighting4 = ['Broad lighting', 'Loop lighting', 'Rembrandit lighting', 'Glow on face', 'Sun bathing face', 'Moonlight', 'Starlight', 'Golden hour', 'Blue hour', 'Panchromatic', 'Redscale', 'Shadow plays', 'Neon light', 'Holographic', 'Shimmering', 'Iridescence' ,'Prismatic']
-    var lighting5 = ['Sunlight', 'Lens flare', 'Motion blur', 'Spring blur', 'Speed blur', 'Zoom blur' , 'Focal blur', 'Redial blur', 'Velocity blur', 'Tilt-shift effect', 'Long exposure trails', 'Zoom burst' ]
-
-    
-    const lighting = [...lighting0, ...lighting1, ...lighting2, ...lighting3, ...lighting4,  ...lighting5];
-
-    var color = ['chroma key green colored screen', 'chroma key umber colored screen', , 'chroma key yellow colored screen']
+    const camera = FS.readFileSync('./data/camera.txt').toString().split('\n')
+    const lighting = FS.readFileSync('./data/light.txt').toString().split('\n')
+    const color = FS.readFileSync('./data/color.txt').toString().split('\n')
+    const genre = FS.readFileSync('./data/genre.txt').toString().split('\n')
 
     var count = [3, 4, 2]
 
     var option0 = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw',  'frankenthroat-punch-pusspack', 'purehearttedcattlin']
-    var option = [ 'purehearttedcattlin' , 'purehearttedcattlin']
+    var option = ['okeenokeeswamp-trentabmit', 'okeenokeeswamp-trentabmit']
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
-    var score = ['1.03693', '1.203693', '1.303693', '1.403693', '0.3693', '0.203693', '0.6303693', '0.0403693']
+    var score = ['1.03693', '1.203693', '1.303693', '1.403693', '0.93693', '0.8203693', '1.46303693', '0.70403693']
+
 
     var Chance = require('chance');
 
@@ -135,6 +125,7 @@ var action = () => {
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
     var now5 = chance.pickone(color)
+    var now6 = chance.pickone(genre)
 
     if (now2 != null) {
         now2 = now2.replace(/\r?\n|\r/g, "");
@@ -143,7 +134,7 @@ var action = () => {
     boom = boom.replace(/\r?\n|\r/g, "");
 
     var main = 'Send ' + boom + ' '
-    tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
+    tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now6 + " , " + now3 + ' , ' + now4 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
 
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
 
@@ -160,7 +151,7 @@ var action = () => {
     last1 = now1;
     last2 = S(boom).slugify().s;
 
-    var list = [tmpAA, tmpBB, tmpCC, tmpDD, tmpEE, tmp00, tmp01, tmp02, tmp03, tmp04, tmp05, tmp06, tmp07, tmp08, tmp09, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16]
+    var list = [tmpAA, tmpBB, tmpCC, tmpDD, tmpEE, tmpFF, tmpGG, tmpHH, tmp00, tmp01, tmp02, tmp03, tmp04, tmp05, tmp06, tmp07, tmp08, tmp09, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16]
 
     var output = list.join('\n')
 
@@ -173,7 +164,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 60000 * 5 + 65000)
+        setTimeout(action, 60000 * 5 + 650)
     });
 
 }

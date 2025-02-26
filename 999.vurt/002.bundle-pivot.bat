@@ -1,1 +1,0 @@
-node ./data/hand/000.eveiefy -t 110.shade
