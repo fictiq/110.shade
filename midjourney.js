@@ -143,7 +143,7 @@ var action = () => {
     var now2 = chance.pickone(subject)
     
     // if you want more control
-    now2 = 'ostentatious opulent swamp'
+    now2 = 'ancient giant 50 foot tall stone fortification around a swamp '
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
