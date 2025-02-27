@@ -139,7 +139,7 @@ var action = () => {
     var now2 = chance.pickone(subject)
     
     // if you want more control
-    now2 = "american alligator eye"
+    now2 = "american alligator"
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
