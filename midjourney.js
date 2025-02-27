@@ -38,7 +38,7 @@ var tmp22 = 'sleep, 200'
 var tmp23 = 'send {LButton}'
 var tmp24 = 'sleep, 300'
 var tmp25 = 'send {RButton}'
-var tmp26 = 'MouseMove,  708,  880'
+var tmp26 = 'MouseMove,  708,  800'
 var tmp27 = 'send {LButton}'
 var tmp28 = 'sleep, 6000'
 var tmp29 = 'MouseMove,  1880,  160'
@@ -81,7 +81,7 @@ var tmp58 = 'sleep, 200'
 var tmp59 = 'send {LButton}'
 var tmp60 = 'sleep, 200'
 var tmp61 = 'send {RButton}'
-var tmp62 = 'MouseMove,  1320,  870'
+var tmp62 = 'MouseMove,  1320,  800'
 var tmp63 = 'send {LButton}'
 var tmp64 = 'sleep, 6000'
 var tmp65 = 'MouseMove,  1880,  160'
@@ -139,7 +139,7 @@ var action = () => {
     var now2 = chance.pickone(subject)
     
     // if you want more control
-    now2 = 'ancient giant 50 foot tall stone fortification around a swamp '
+    now2 = "american alligator eye"
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
