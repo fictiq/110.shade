@@ -93,7 +93,7 @@ var action = () => {
     var count = [3, 4, 2]
 
     var option0 = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw',  'frankenthroat-punch-pusspack', 'purehearttedcattlin']
-    var option = ['okeenokeeswamp-trentabmit', 'okeenokeeswamp-trentabmit']
+    var option = ['crtdisplay-discool', 'crtdisplay-discool']
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
