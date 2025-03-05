@@ -40,8 +40,8 @@ list.forEach((a, b) => {
     if (png == true) { file += '.png' }
     if (jpg == true) { file += '.jpg' }
 
-    var input = '../filter/' + a
-    var output = "../reference/" + file
+    var input = '../junk/' + a
+    var output = "../umbrella/" + file
 
     FS.copyFileSync( input, output)
     FS.removeSync( input )

@@ -17,22 +17,22 @@ var tmpKK = 'send {WheelUp 1}'
 var tmpLL = 'send {WheelUp 1}'
 
 var tmp00 = 'MouseMove, 178, 325'
-var tmp01 = 'send {RButton}'
+var tmp01 = 'send {LButton}'
 var tmp02 = 'Send, ^a'
 var tmp03 = 'Sleep, 1500'
 var tmp04 = 'Send, ^c'
 var tmp05 = 'Send supernatural political spy thriller lizard-skull-gator-man<lora:lizard-skull-gator-man:1.703693> '
 var tmp06 = 'MouseMove, 895, 790'
-var tmp07 = 'send {RButton}'
+var tmp07 = 'send {LButton}'
 var tmp08 = 'Sleep, 1500'
 var tmp09 = 'MouseMove, 450, 910'
-var tmp10 = 'send {RButton}'
+var tmp10 = 'send {LButton}'
 var tmp11 = 'Sleep, 1550'
 var tmp12 = 'Send 00000 '
 var tmp13 = 'SendInput {enter}'
 var tmp14 = 'Sleep, 1500'
 var tmp15 = 'MouseMove, 1633, 350'
-var tmp16 = 'send {RButton}'
+var tmp16 = 'send {LButton}'
 
 
 
@@ -46,10 +46,10 @@ var action = () => {
 
     if (last0 != null) {
 
-        var lastDirList = FS.readdirSync('../diffusion/outputs/img2img-images/')
+        var lastDirList = FS.readdirSync('../kitchen/diffusion/outputs/img2img-images/')
         var lastDir = lastDirList.pop();
 
-        var nowDir = '../diffusion/outputs/img2img-images/' + lastDir
+        var nowDir = '../kitchen/diffusion/outputs/img2img-images/' + lastDir
         var lastImgList = FS.readdirSync(nowDir)
         var lastImg = lastImgList.pop()
 
@@ -62,7 +62,7 @@ var action = () => {
             var fin = sec + '.' + last0 + '-' + last1 + '-' + last2 + '.' + lastImg;
 
             var input = nowDir + '/' + lastImg;
-            var out = '../artwork/' + fin;
+            var out = '../work/' + fin;
 
             FS.copyFileSync(input, out)
             //FS.removeSync(input)
@@ -93,7 +93,7 @@ var action = () => {
     var count = [3, 4, 2]
 
     var option0 = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw',  'frankenthroat-punch-pusspack', 'purehearttedcattlin']
-    var option = ['crtdisplay-discool', 'crtdisplay-discool']
+    var option = ['lizziskullieyiii', 'lizziskullieyiii']
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
@@ -164,7 +164,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 60000 * 5 + 650)
+        setTimeout(action, 70000 * 5 + 650)
     });
 
 }

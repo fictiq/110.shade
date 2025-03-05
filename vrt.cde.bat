@@ -1,3 +1,3 @@
 cd..
-cd code
+cd vcode
 start Code.exe ../110.shade

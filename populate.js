@@ -4,7 +4,7 @@ var S = require('string')
 var Chance = require('chance');
 var chance = new Chance();
 
-var lastDirList = FS.readdirSync('../reference')
+var lastDirList = FS.readdirSync('../umbrella')
 
 var count = 333;
 
@@ -18,7 +18,7 @@ for ( var i = 0; i < count; i++){
 output.forEach( (a , b )=>{
 
     console.log( 'copy ' + a )
-    FS.copy( '../reference/' + a, '../image/' + a  )
+    FS.copy( '../umbrella/' + a, '../image/' + a  )
 
 })
 
