@@ -22,7 +22,7 @@ var tmp02 = 'Send, ^a'
 var tmp03 = 'Sleep, 1500'
 var tmp04 = 'Send, ^c'
 var tmp05 = 'Send supernatural political spy thriller lizard-skull-gator-man<lora:lizard-skull-gator-man:1.703693> '
-var tmp06 = 'MouseMove, 895, 790'
+var tmp06 = 'MouseMove, 904, 733'
 var tmp07 = 'send {LButton}'
 var tmp08 = 'Sleep, 1500'
 var tmp09 = 'MouseMove, 450, 910'
@@ -94,10 +94,12 @@ var action = () => {
 
     var option0 = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw',  'frankenthroat-punch-pusspack', 'purehearttedcattlin']
     var option = ['lizziskullieyiii', 'lizziskullieyiii']
+    
+var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaampeeedpaddeene' ,'fortwweenkaygldjeeerrly']
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
-    var score = ['1.03693', '1.203693', '1.303693', '1.1403693', '0.93693', '0.8203693', '1.246303693', '0.70403693']
+    var score = ['1.03693', '1.203693', '1.303693', '1.1403693', '0.93693', '0.8203693', '1.246303693', '1.070403693']
 
 
     var Chance = require('chance');
@@ -134,11 +136,11 @@ var action = () => {
     boom = boom.replace(/\r?\n|\r/g, "");
 
     var main = 'Send ' + boom + ' '
-    tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now6 + " , " + now3 + ' , ' + now4 + ' , ' + boom + ',  ' + now0 + ' , 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
+    tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ',' + now5 + ' , '  + now6 + ' , ' + boom + ','  + ', cinematic, ultimate details  '
 
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
 
-    tmp05 += ' ' + now0 + '<lora:' + now0 + ':' + chance.pickone(score) + '>'
+    tmp05 += ' <lora:' + now0 + ':' + chance.pickone(score) + '>'
     //tmp05 += ' ' + '<lora:' + nowAA + ':' + chance.pickone(score) + '>'
     //tmp05 += ' ' + '<lora:' + nowBB + ':' + chance.pickone(score) + '>'
     
@@ -164,7 +166,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 70000 * 5 + 650)
+        setTimeout(action, 60000 * 10 + 650)
     });
 
 }
