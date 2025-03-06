@@ -105,13 +105,23 @@ var last2;
 var action = () => {
 
     var subject0 = ['jesus', 'child', 'hacker', 'tyrant', 'victim', 'hunter', 'alligator', 'bee', 'swamp', 'dancer']
-    var subject1 = []
+    var subject = ["interior of dark distressed aztec temple with flooded hallways and flat lighting", "interior of corrupt mayan temple with flooded hallways and flat lighting", "interior of ancient incan temple with unlit hallways and flat lighting", "interior of egyptian ruins with unlit hallways and flat lighting" ]
 
-    var subject = FS.readFileSync('./data/subject.txt').toString().split('\n')
+    var subject0 = [ "object of campy royal jewelry alone in alabama", "object of magical jewelry alone in florida", "object of campy magical jewelry alone in the marsh", "object of magical jewelry from a south georgia museum "  ]
+    var subject1 = [ "artefact of magical jewelry alone in alabama", "artefact of completely campy magical jewelry alone in florida", "artefact of royal jewelry alone in the marsh", "artefact of opulent magical jewelry alone in a south georgia museum "  ]
     
-    subject.forEach( (a,b )=>{
-        subject[b] = a.split(':')[1]
-    })
+    
+
+    var subject = [...subject0, ...subject1] ;
+
+    //var subject = [ 'magical jewrly' , 'magical jewelry '] ;
+
+
+    //var subject = FS.readFileSync('./data/subject.txt').toString().split('\n')
+    
+    //subject.forEach( (a,b )=>{
+     //   subject[b] = a.split(':')[1]
+    //})
 
     const camera = FS.readFileSync('./data/camera.txt').toString().split('\n')
     const lighting = FS.readFileSync('./data/light.txt').toString().split('\n')
@@ -139,7 +149,7 @@ var action = () => {
     var now2 = chance.pickone(subject)
     
     // if you want more control
-    now2 = "american alligator"
+    //now2 = "dark distressed aztec temple with flooded hallways"
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
