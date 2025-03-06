@@ -4,22 +4,22 @@ var S = require('string')
 const { exec } = require('child_process');
 
 var tmp00 = 'MouseMove, 178, 325'
-var tmp01 = 'send {RButton}'
+var tmp01 = 'send {LButton}'
 var tmp02 = 'Send, ^a'
 var tmp03 = 'Sleep, 150'
 var tmp04 = 'Send, ^c'
 var tmp05 = 'Send supernatural political spy thriller lizard-skull-gator-man<lora:lizard-skull-gator-man:1.703693> '
 var tmp06 = 'MouseMove, 900, 730'
-var tmp07 = 'send {RButton}'
+var tmp07 = 'send {LButton}'
 var tmp08 = 'Sleep, 150'
 var tmp09 = 'MouseMove, 450, 910'
-var tmp10 = 'send {RButton}'
+var tmp10 = ''
 var tmp11 = 'Sleep, 1550'
 var tmp12 = 'Send 00000 '
-var tmp13 = 'SendInput {enter}'
+var tmp13 = ''
 var tmp14 = 'Sleep, 150'
 var tmp15 = 'MouseMove, 1633, 350'
-var tmp16 = 'send {RButton}'
+var tmp16 = 'send {LButton}'
 
 var last0;
 var last1;
@@ -31,10 +31,10 @@ var action = () => {
 
     if (last0 != null) {
 
-        var lastDirList = FS.readdirSync('../diffusion/outputs/txt2img-images/')
+        var lastDirList = FS.readdirSync('../kitchen/diffusion/outputs/txt2img-images/')
         var lastDir = lastDirList.pop();
 
-        var nowDir = '../diffusion/outputs/txt2img-images/' + lastDir
+        var nowDir = '../kitchen/diffusion/outputs/txt2img-images/' + lastDir
         var lastImgList = FS.readdirSync(nowDir)
         var lastImg = lastImgList.pop()
 
@@ -47,7 +47,7 @@ var action = () => {
             var fin = sec + '.' + last0 + '-' + last1 + '-' + last2 + '.' + lastImg;
 
             var input = nowDir + '/' + lastImg;
-            var out = '../artwork/' + fin;
+            var out = '../work/' + fin;
 
             FS.copyFileSync(input, out)
             //FS.removeSync(input)
@@ -69,6 +69,8 @@ var action = () => {
         subject[b] = a.split(':')[1]
     })
 
+   
+
     const camera = FS.readFileSync('./data/camera.txt').toString().split('\n')
     const lighting = FS.readFileSync('./data/light.txt').toString().split('\n')
     const color = FS.readFileSync('./data/color.txt').toString().split('\n')
@@ -76,17 +78,16 @@ var action = () => {
 
     var count = [3, 4, 2]
 
-    var option = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw']
-
-    var option = ['okeenokeeswamp-trentabmit', 'okeenokeeswamp-trentabmit']
+    var option = ['interiorzhousebottt', 'lizziskullieyiii', 'cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw']
 
 
+var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaampeeedpaddeene' ,'fortwweenkaygldjeeerrly']
 
 
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
-    var score = ['1.03693', '1.203693', '1.303693', '1.403693', '0.93693', '0.8203693', '1.46303693', '0.70403693']
+    var score = ['1.03693', '1.203693', '1.303693', '1.1403693', '0.93693', '0.8203693', '1.046303693', '0.970403693']
 
     var Chance = require('chance');
 
@@ -110,6 +111,8 @@ var action = () => {
     var now2 = chance.pickone(subject)
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
+    //now4 = 'Dimly lit'
+
     var now5 = chance.pickone(color)
 
 
@@ -118,12 +121,21 @@ var action = () => {
 
     var main = 'Send ' + boom + ' '
 
+    
+    //tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , 2020s, anime, cinematic, '
 
-    tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , ' + boom + ', 2020s, anime, screencap, cinematic, ultimate details  ' + now1 + ''
+
+    tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 +  ' , ' + boom + '  , 2020s, anime, screencap, cinematic, ultimate details  '
 
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
-    tmp05 += ' ' + now0 + '<lora:' + now0 + ':' + now1 + '>'
+    tmp05 += ' <lora:' + now0 + ':' + now1 + '>'
     //tmp12 = 'Send ' + love
+
+    //
+    //masterpiece, temple interior , neutral angle shot , Broad lighting , 2020s, anime, screencap, cinematic, ultimate details   <lora:tresurtempleees:1>
+
+    tmp05
+    
 
     tmp12 = ' '
 
@@ -147,7 +159,7 @@ var action = () => {
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 60000 * 2 + 30000)
+        setTimeout(action, 60000 * 5 + 5300)
     });
 
 
