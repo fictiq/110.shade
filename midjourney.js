@@ -107,8 +107,8 @@ var action = () => {
     var subject0 = ['jesus', 'child', 'hacker', 'tyrant', 'victim', 'hunter', 'alligator', 'bee', 'swamp', 'dancer']
     var subject = ["interior of dark distressed aztec temple with flooded hallways and flat lighting", "interior of corrupt mayan temple with flooded hallways and flat lighting", "interior of ancient incan temple with unlit hallways and flat lighting", "interior of egyptian ruins with unlit hallways and flat lighting" ]
 
-    var subject0 = [ "object of campy royal jewelry alone in alabama", "object of magical jewelry alone in florida", "object of campy magical jewelry alone in the marsh", "object of magical jewelry from a south georgia museum "  ]
-    var subject1 = [ "artefact of magical jewelry alone in alabama", "artefact of completely campy magical jewelry alone in florida", "artefact of royal jewelry alone in the marsh", "artefact of opulent magical jewelry alone in a south georgia museum "  ]
+    var subject0 = [ "single object of a lance", "single object of a lance", "single object of a lance", "single object of a lance"  ]
+    var subject1 = [ "single object of a lance", "single object of a lance", "single object of a lance", "single object of a lance "  ]
     
     
 
@@ -134,7 +134,9 @@ var action = () => {
     var phrase = ['supernatural', 'political', 'spy', 'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
     var option = ['chroma key green colored screen',  'chroma key umber colored screen', ,  'chroma key yellow colored screen']
     var score = [ ' --ar 16:9 --niji 6 --style raw --stylize 90', ' --ar 16:9 --niji 5 --style expressive --stylize 90']
+    var score = [ '  --niji 6 --style raw --stylize 90', ' --niji 5 --style expressive --stylize 90']
     
+
     var round = chance.pickone(count)
 
     var boom = ' '
