@@ -136,7 +136,7 @@ var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaam
     boom = boom.replace(/\r?\n|\r/g, "");
 
     var main = 'Send ' + boom + ' '
-    tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ',' + now5 + ' , '  + now6 + ' , ' + boom + ','  + ', cinematic, ultimate details  '
+    tmp05 = 'Send ' + now6 + ' , ' + now4 + ', cinematic, ultimate details  '
 
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
 
@@ -166,7 +166,7 @@ var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaam
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 60000 * 10 + 650)
+        setTimeout(action, 60000 * 10 + 6500)
     });
 
 }
