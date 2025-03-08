@@ -105,13 +105,23 @@ var last2;
 var action = () => {
 
     var subject0 = ['jesus', 'child', 'hacker', 'tyrant', 'victim', 'hunter', 'alligator', 'bee', 'swamp', 'dancer']
-    var subject1 = []
+    var subject = ["interior of dark distressed aztec temple with flooded hallways and flat lighting", "interior of corrupt mayan temple with flooded hallways and flat lighting", "interior of ancient incan temple with unlit hallways and flat lighting", "interior of egyptian ruins with unlit hallways and flat lighting" ]
 
-    var subject = FS.readFileSync('./data/subject.txt').toString().split('\n')
+    var subject0 = [ "single object of a lance", "single object of a lance", "single object of a lance", "single object of a lance"  ]
+    var subject1 = [ "single object of a lance", "single object of a lance", "single object of a lance", "single object of a lance "  ]
     
-    subject.forEach( (a,b )=>{
-        subject[b] = a.split(':')[1]
-    })
+    
+
+    var subject = [...subject0, ...subject1] ;
+
+    //var subject = [ 'magical jewrly' , 'magical jewelry '] ;
+
+
+    //var subject = FS.readFileSync('./data/subject.txt').toString().split('\n')
+    
+    //subject.forEach( (a,b )=>{
+     //   subject[b] = a.split(':')[1]
+    //})
 
     const camera = FS.readFileSync('./data/camera.txt').toString().split('\n')
     const lighting = FS.readFileSync('./data/light.txt').toString().split('\n')
@@ -124,7 +134,9 @@ var action = () => {
     var phrase = ['supernatural', 'political', 'spy', 'thriller', 'gothic', 'horror', 'fantasy', 'cyberpunk', 'mystery', 'adventure', 'romance', 'silly', 'glop', 'brutalist', 'western', 'southern']
     var option = ['chroma key green colored screen',  'chroma key umber colored screen', ,  'chroma key yellow colored screen']
     var score = [ ' --ar 16:9 --niji 6 --style raw --stylize 90', ' --ar 16:9 --niji 5 --style expressive --stylize 90']
+    var score = [ '  --niji 6 --style raw --stylize 90', ' --niji 5 --style expressive --stylize 90']
     
+
     var round = chance.pickone(count)
 
     var boom = ' '
@@ -139,7 +151,7 @@ var action = () => {
     var now2 = chance.pickone(subject)
     
     // if you want more control
-    now2 = "american alligator"
+    //now2 = "dark distressed aztec temple with flooded hallways"
     
     var now3 = chance.pickone(camera)
     var now4 = chance.pickone(lighting)
