@@ -3,23 +3,23 @@ var S = require('string')
 
 const { exec } = require('child_process');
 
-var tmp00 = 'MouseMove, 178, 325'
-var tmp01 = 'send {LButton}'
+var tmp00 = 'MouseMove, 180, 360'
+var tmp01 = 'send {RButton}'
 var tmp02 = 'Send, ^a'
 var tmp03 = 'Sleep, 150'
 var tmp04 = 'Send, ^c'
 var tmp05 = 'Send supernatural political spy thriller lizard-skull-gator-man<lora:lizard-skull-gator-man:1.703693> '
-var tmp06 = 'MouseMove, 900, 730'
-var tmp07 = 'send {LButton}'
+var tmp06 = 'MouseMove, 1556, 420'
+var tmp07 = 'send {RButton}'
 var tmp08 = 'Sleep, 150'
 var tmp09 = 'MouseMove, 450, 910'
 var tmp10 = ''
 var tmp11 = 'Sleep, 1550'
-var tmp12 = 'Send 00000 '
+var tmp12 = 'Sleep, 150'
 var tmp13 = ''
 var tmp14 = 'Sleep, 150'
 var tmp15 = 'MouseMove, 1633, 350'
-var tmp16 = 'send {LButton}'
+var tmp16 = 'Sleep, 150'
 
 var last0;
 var last1;
@@ -69,7 +69,7 @@ var action = () => {
         subject[b] = a.split(':')[1]
     })
 
-   
+
 
     const camera = FS.readFileSync('./data/camera.txt').toString().split('\n')
     const lighting = FS.readFileSync('./data/light.txt').toString().split('\n')
@@ -81,7 +81,7 @@ var action = () => {
     var option = ['interiorzhousebottt', 'lizziskullieyiii', 'cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw']
 
 
-var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaampeeedpaddeene' ,'fortwweenkaygldjeeerrly']
+    var option = ['zoggg', 'zoggg']
 
 
 
@@ -121,21 +121,33 @@ var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaam
 
     var main = 'Send ' + boom + ' '
 
-    
+    var holder = []
+    holder.push ( {idx:'zoggg' , src:'zoggg character'} )
+    holder.push ( {idx:'fortwweenkaygldjeeerrly' , src:'fortwweenkaygldjeeerrly treasure'} )
+    holder.push ( {idx:'limmeeinealspwarce' , src:'limmeeinealspwarce environment'} )
+    holder.push ( {idx:'opuuulestostentateweap' , src:'opuuulestostentateweap weaponary'} )
+    holder.push ( {idx:'skulllizarrrd' , src:'skulllizarrrd creature'} )
+    holder.push ( {idx:'swaaampeeedpaddeene' , src:'swaaampeeedpaddeene exterior'} )
+    holder.push ( {idx:'tresurtempleees' , src:'tresurtempleees interior'} )
+
+
+    var bonk = chance.pickone(holder)
+
+
     //tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , 2020s, anime, cinematic, '
 
 
-    tmp05 = 'Send masterpiece, ' + now2 + ' , ' + now3 + ' , ' + now4 +  ' , ' + boom + '  , 2020s, anime, screencap, cinematic, ultimate details  '
+    tmp05 = 'Send masterpiece , ' +  bonk.src + ' , ' + now2 + ' , ' + now3 + ' , ' + now4 + ' , ' + now5 + '  , 2020s, anime, screencap, cinematic, ultimate details  '
 
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
-    tmp05 += ' <lora:' + now0 + ':' + now1 + '>'
+    tmp05 += ' <lora:' + bonk.idx + ':' + now1 + '>'
     //tmp12 = 'Send ' + love
 
     //
     //masterpiece, temple interior , neutral angle shot , Broad lighting , 2020s, anime, screencap, cinematic, ultimate details   <lora:tresurtempleees:1>
 
     tmp05
-    
+
 
     tmp12 = ' '
 
@@ -159,7 +171,7 @@ var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaam
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 60000 * 5 + 5300)
+        setTimeout(action, 60000 * 3 + 5300)
     });
 
 

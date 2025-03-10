@@ -17,22 +17,22 @@ var tmpKK = 'send {WheelUp 1}'
 var tmpLL = 'send {WheelUp 1}'
 
 var tmp00 = 'MouseMove, 178, 325'
-var tmp01 = 'send {LButton}'
+var tmp01 = 'send {RButton}'
 var tmp02 = 'Send, ^a'
 var tmp03 = 'Sleep, 1500'
 var tmp04 = 'Send, ^c'
 var tmp05 = 'Send supernatural political spy thriller lizard-skull-gator-man<lora:lizard-skull-gator-man:1.703693> '
 var tmp06 = 'MouseMove, 904, 733'
-var tmp07 = 'send {LButton}'
+var tmp07 = 'send {RButton}'
 var tmp08 = 'Sleep, 1500'
 var tmp09 = 'MouseMove, 450, 910'
-var tmp10 = 'send {LButton}'
+var tmp10 = 'send {RButton}'
 var tmp11 = 'Sleep, 1550'
 var tmp12 = 'Send 00000 '
 var tmp13 = 'SendInput {enter}'
 var tmp14 = 'Sleep, 1500'
 var tmp15 = 'MouseMove, 1633, 350'
-var tmp16 = 'send {LButton}'
+var tmp16 = 'send {RButton}'
 
 
 
@@ -92,10 +92,13 @@ var action = () => {
 
     var count = [3, 4, 2]
 
-    var option0 = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw',  'frankenthroat-punch-pusspack', 'purehearttedcattlin']
+    var option0 = ['cludstrumellomush', 'kaaarth-girl', 'kbar-riddlez', 'larry-duck-man', 'eagle-paw-paw-haw', 'zoggg', 'orbie-mayhaw', 'frankenthroat-punch-pusspack', 'purehearttedcattlin']
     var option = ['lizziskullieyiii', 'lizziskullieyiii']
-    
-var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaampeeedpaddeene' ,'fortwweenkaygldjeeerrly']
+
+    var option = ['limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaampeeedpaddeene', 'fortwweenkaygldjeeerrly']
+
+
+    var option = ['zoggg', 'zoggg']
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
@@ -118,8 +121,8 @@ var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaam
         boom += pop + ' '
     }
 
-    var nowAA = chance.pickone( option0)
-    var nowBB = chance.pickone( option0 )
+    var nowAA = chance.pickone(option0)
+    var nowBB = chance.pickone(option0)
     var now0 = chance.pickone(option)
     var now1 = chance.pickone(score)
 
@@ -135,17 +138,18 @@ var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaam
 
     boom = boom.replace(/\r?\n|\r/g, "");
 
+
     var main = 'Send ' + boom + ' '
-    tmp05 = 'Send ' + now6 + ' , ' + now4 + ', cinematic, ultimate details  '
+    tmp05 = 'Send masterpiece, zoggg character, ' + now6 + ' , ' + + now5 + ' , ' + now4 + " , " + now3 + " , " + now2 + ', cinematic, ultimate details, anime, 2020s  '
 
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
 
     tmp05 += ' <lora:' + now0 + ':' + chance.pickone(score) + '>'
     //tmp05 += ' ' + '<lora:' + nowAA + ':' + chance.pickone(score) + '>'
     //tmp05 += ' ' + '<lora:' + nowBB + ':' + chance.pickone(score) + '>'
-    
-    
-    
+
+
+
     tmp12 = 'Send ' + love
 
     //tmp12 = ' '
@@ -166,7 +170,7 @@ var option = [ 'limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaam
         }
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
-        setTimeout(action, 60000 * 10 + 6500)
+        setTimeout(action, 60000 * 1 + 6500)
     });
 
 }
