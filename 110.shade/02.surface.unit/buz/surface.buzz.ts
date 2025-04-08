@@ -73,6 +73,27 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //container.pivot.x = container.width / 2;
     //container.pivot.y = container.height / 2;
 
+    const texture = await Assets.load('https://pixijs.com/assets/bunny.png');
+
+    // Create a bunny Sprite
+    const bunny = new Sprite(texture);
+
+    // Center the sprite's anchor point
+    bunny.anchor.set(0.5);
+
+    // Move the sprite to the center of the screen
+    bunny.x = app.screen.width / 2;
+    bunny.y = app.screen.height / 2;
+
+    app.stage.addChild(bunny);
+
+    //await Assets.load([
+    //    "./sprite/000/000.json"
+    //]);
+
+    //const animations = Assets.cache.get('./sprite/000/000.json').data.animations;
+
+    //debugger
 
 
 

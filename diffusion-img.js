@@ -31,10 +31,8 @@ var tmp11 = 'Sleep, 1550'
 var tmp12 = 'Send 00000 '
 var tmp13 = 'SendInput {enter}'
 var tmp14 = 'Sleep, 1500'
-var tmp15 = 'MouseMove, 1633, 350'
+var tmp15 = 'MouseMove, 1590, 400'
 var tmp16 = 'send {RButton}'
-
-
 
 var last0;
 var last1;
@@ -62,7 +60,9 @@ var action = () => {
             var fin = sec + '.' + last0 + '-' + last1 + '-' + last2 + '.' + lastImg;
 
             var input = nowDir + '/' + lastImg;
-            var out = '../work/' + fin;
+            var out = '../kitchen/work/' + fin;
+
+            FS.ensureFileSync( out )
 
             FS.copyFileSync(input, out)
             //FS.removeSync(input)
@@ -98,7 +98,7 @@ var action = () => {
     var option = ['limmeeinealspwarce', 'tresurtempleees', 'skulllizarrrd', 'swaaampeeedpaddeene', 'fortwweenkaygldjeeerrly']
 
 
-    var option = ['zoggg', 'zoggg']
+    var option = ['greasi-gallllloooonz', 'greasi-gallllloooonz']
 
     //var score = ['0.2703693', '0.4703693', '0.703693', '0.903693', '1.703693', '1.03693', '1.203693', '1.303693', '1.403693', '1.99403693']
 
@@ -138,11 +138,12 @@ var action = () => {
 
     boom = boom.replace(/\r?\n|\r/g, "");
 
-
     var main = 'Send ' + boom + ' '
-    tmp05 = 'Send masterpiece, zoggg character, ' + now6 + ' , ' + + now5 + ' , ' + now4 + " , " + now3 + " , " + now2 + ', cinematic, ultimate details, anime, 2020s  '
+    tmp05 = 'Send masterpiece, muthrefxk character, ' + now6 + ' , ' + + now5 + ' , ' + now4 + " , " + now3 + " , " + now2 + ', cinematic, ultimate details, anime, 2020s  '
 
     tmp05 = tmp05.replace(/\r?\n|\r/g, "");
+
+    now0 = 'muthrefxk'
 
     tmp05 += ' <lora:' + now0 + ':' + chance.pickone(score) + '>'
     //tmp05 += ' ' + '<lora:' + nowAA + ':' + chance.pickone(score) + '>'
