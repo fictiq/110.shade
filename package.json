@@ -9,7 +9,10 @@
     "fs-extra": "^11.3.0",
     "parcel": "^2.13.3",
     "process": "^0.11.10",
-    "websocket-stream": "^5.5.2"
+    "websocket-stream": "^5.5.2",
+    "typescript-ioc": "^3.2.2",
+    "@root/walk": "^1.1.0",
+    "terminal-kit": "^3.0.0"
   },
   "dependencies": {
     "@pixi/ui": "^2.2.0",
@@ -26,6 +29,7 @@
     "react-dom": "^19.0.0",
     "rx-lite": "^4.0.8",
     "string": "^3.3.3",
-    "stringify": "^5.2.0"
+    "stringify": "^5.2.0",
+    "luxon": "^3.1.0"
   }
 }

@@ -30,6 +30,7 @@ export const initShade = async (cpy: ShadeModel, bal: ShadeBit, ste: State) => {
     once = true
 
 
+
     if (bal.dat != null) bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, lst: [ActShd, ActVsg, ActSrf, ActCan, ActGph, ActTxt, ActSpr, ActHex, ActVid, ActTun], dat: bal.dat, src: bal.src })
 
     if (bal.val == 1) patch(ste, ActMnu.INIT_MENU, bal);

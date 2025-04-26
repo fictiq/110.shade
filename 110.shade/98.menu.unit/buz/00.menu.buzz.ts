@@ -20,6 +20,9 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
+
+  debugger
+
   bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "-----------", bit: 'local' })
 
   bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "SHADE PIVOT V1.1", bit: 'local' })
