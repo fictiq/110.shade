@@ -14,7 +14,7 @@ import * as Grid from '../../val/grid';
 import * as Align from '../../val/align'
 import * as Color from '../../val/console-color';
 
-var bit, lst, dex
+var bit, lst, dex, src
 
 export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
@@ -41,6 +41,47 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 
+   //lst = [ActPvt.CLOUD_PIVOT, ActPvt.UPDATE_PIVOT, ActPvt.OPEN_PIVOT, ActPvt.EDIT_PIVOT, ActSpc.MERGE_SPACE, ActMnu.FOCUS_MENU, ActMnu.HEXMAP_MENU, , ActMnu.RENDER_MENU]
+
+   lst = [ ActShd.OPEN_SHADE, ActShd.UPDATE_SHADE ]
+
+   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
+   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
+ 
+   src = bit.chcBit.src;
+ 
+   switch (src) {
+  
+     case ActShd.UPDATE_SHADE:
+       bit = await ste.hunt(ActShd.UPDATE_SHADE, {})
+       break;
+ 
+     case ActShd.OPEN_SHADE:
+       bit = await ste.hunt( ActShd.OPEN_SHADE, {})
+       break;
+ 
+ 
+     default:
+       bit = await ste.hunt(ActTrm.CLOSE_TERMINAL, {})
+       break;
+   }
+ 
+ 
+   bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src })
+ 
+   updateMenu(cpy, bal, ste);
+ 
+   //var lst = [ ActPvt.CLOUD_PIVOT, ActPvt.UPDATE_PIVOT, ActPvt.OPEN_PIVOT, ActPvt.EDIT_PIVOT, ActSpc.MERGE_SPACE, ActMnu.FOCUS_MENU, ActMnu.HEXMAP_MENU, ActMnu.YIELD_MENU, ActMnu.RENDER_MENU]
+   //lst.push(ActFoc.MODEL_FOCUS)
+ 
+   //bit = await ste.hunt(ActTrm.UPDATE_TERMINAL, { lst })
+ 
+   // bit = bit.trmBit;
+   // var idx = lst[bit.val];
+ 
+ 
+   //updateMenu(cpy, bal, ste);
+ 
  
   //updateMenu(cpy, bal, ste);
 
