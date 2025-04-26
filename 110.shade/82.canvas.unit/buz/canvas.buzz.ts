@@ -10,7 +10,7 @@ export const initCanvas = (cpy: CanvasModel, bal: CanvasBit, ste: State) => {
 };
 
 export const hexmapCanvas = (cpy: CanvasModel, bal: CanvasBit, ste: State) => {
-    
+
     console.log("hexmap canvas")
     bal.slv({ cvsBit: { idx: "hexmap-canvas", dat } });
 
@@ -56,7 +56,7 @@ export const createCanvas = async (cpy: CanvasModel, bal: CanvasBit, ste: State)
     dat.sprLst = [];
     dat.hexLst = [];
 
-    let net:NetBit = dat.net;
+    let net: NetBit = dat.net;
 
     dat.bit = contrib.canvas({
         left: net.left,
@@ -189,5 +189,4 @@ import * as GRID from '../../val/grid'
 import * as SHADE from '../../val/shade'
 import NetBit from "../../81.grid.unit/fce/net.bit"
 
-import { Bezier } from "bezier-js";
 import * as Honeycomb from "honeycomb-grid";

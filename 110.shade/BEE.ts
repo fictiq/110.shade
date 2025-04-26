@@ -26,7 +26,6 @@ import GraphicUnit from "./87.graphic.unit/graphic.unit";
 import HexagonUnit from "./88.hexagon.unit/hexagon.unit";
 import SpriteUnit from "./89.sprite.unit/sprite.unit";
 import TextUnit from "./90.text.unit/text.unit";
-import DiskUnit from "./96.disk.unit/disk.unit";
 import CollectUnit from "./97.collect.unit/collect.unit";
 import MenuUnit from "./98.menu.unit/menu.unit";
 import BusUnit from "./99.bus.unit/bus.unit";
@@ -84,8 +83,6 @@ import Sprite from "./89.sprite.unit/fce/sprite.interface";
 import { SpriteModel } from "./89.sprite.unit/sprite.model";
 import Text from "./90.text.unit/fce/text.interface";
 import { TextModel } from "./90.text.unit/text.model";
-import Disk from "./96.disk.unit/fce/disk.interface";
-import { DiskModel } from "./96.disk.unit/disk.model";
 import Collect from "./97.collect.unit/fce/collect.interface";
 import { CollectModel } from "./97.collect.unit/collect.model";
 import Menu from "./98.menu.unit/fce/menu.interface";
@@ -94,7 +91,7 @@ import Bus from "./99.bus.unit/fce/bus.interface";
 import { BusModel } from "./99.bus.unit/bus.model";
 
 
-export const list: Array<any> = [ShadeUnit,SurfaceUnit,ContainerUnit,GraphicUnit,TextUnit,SpriteUnit,HexagonUnit,FocigonUnit,LoopUnit,ToonUnit,VideoUnit,FrameUnit,CameraUnit,VisageUnit,ChromeUnit,TerminalUnit,GridUnit,CanvasUnit,ConsoleUnit,InputUnit,ChoiceUnit,ContainerUnit,GraphicUnit,HexagonUnit,SpriteUnit,TextUnit,DiskUnit,CollectUnit,MenuUnit,BusUnit];
+export const list: Array<any> = [ShadeUnit,SurfaceUnit,ContainerUnit,GraphicUnit,TextUnit,SpriteUnit,HexagonUnit,FocigonUnit,LoopUnit,ToonUnit,VideoUnit,FrameUnit,CameraUnit,VisageUnit,ChromeUnit,TerminalUnit,GridUnit,CanvasUnit,ConsoleUnit,InputUnit,ChoiceUnit,ContainerUnit,GraphicUnit,HexagonUnit,SpriteUnit,TextUnit,CollectUnit,MenuUnit,BusUnit];
 
 import * as reduceFromShade from "./00.shade.unit/shade.reduce";
 import * as reduceFromSurface from "./02.surface.unit/surface.reduce";
@@ -122,7 +119,6 @@ import * as reduceFromGraphic from "./87.graphic.unit/graphic.reduce";
 import * as reduceFromHexagon from "./88.hexagon.unit/hexagon.reduce";
 import * as reduceFromSprite from "./89.sprite.unit/sprite.reduce";
 import * as reduceFromText from "./90.text.unit/text.reduce";
-import * as reduceFromDisk from "./96.disk.unit/disk.reduce";
 import * as reduceFromCollect from "./97.collect.unit/collect.reduce";
 import * as reduceFromMenu from "./98.menu.unit/menu.reduce";
 import * as reduceFromBus from "./99.bus.unit/bus.reduce";
@@ -155,7 +151,6 @@ graphic : reduceFromGraphic.reducer,
 hexagon : reduceFromHexagon.reducer, 
 sprite : reduceFromSprite.reducer, 
 text : reduceFromText.reducer, 
-disk : reduceFromDisk.reducer, 
 collect : reduceFromCollect.reducer, 
 menu : reduceFromMenu.reducer, 
 bus : reduceFromBus.reducer, 
@@ -190,7 +185,6 @@ graphic : Graphic = new GraphicModel();
 hexagon : Hexagon = new HexagonModel();
 sprite : Sprite = new SpriteModel();
 text : Text = new TextModel();
-disk : Disk = new DiskModel();
 collect : Collect = new CollectModel();
 menu : Menu = new MenuModel();
 bus : Bus = new BusModel();
