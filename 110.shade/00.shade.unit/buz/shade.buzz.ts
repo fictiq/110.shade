@@ -9,6 +9,8 @@ import * as ActTxt from "../../05.text.unit/text.action";
 import * as ActSpr from "../../06.sprite.unit/sprite.action";
 import * as ActHex from "../../07.hexagon.unit/hexagon.action";
 import * as ActFcg from "../../08.focigon.unit/focigon.action";
+import * as ActCns from "../../83.console.unit/console.action";
+
 
 import * as ActVid from "../../11.video.unit/video.action";
 import * as ActTun from "../../10.toon.unit/toon.action";
@@ -25,13 +27,9 @@ var once = false
 
 export const initShade = async (cpy: ShadeModel, bal: ShadeBit, ste: State) => {
 
-
-
     if (once == true) return
 
     once = true
-
-
 
     if (bal.dat != null) bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, lst: [ActShd, ActVsg, ActSrf, ActCan, ActGph, ActTxt, ActSpr, ActHex, ActVid, ActTun], dat: bal.dat, src: bal.src })
 
@@ -64,30 +62,27 @@ export const openShade = async (cpy: ShadeModel, bal: ShadeBit, ste: State) => {
 
         batch = spawn('cmd', ['/c', sanitizedPath]);
 
-        batch.stdout.on('data', (data) => {
-            console.log(`stdout: ${data}`);
+        batch.stdout.on('data', async (data) => {
+            bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: `stdout: ${data}` })
         });
 
-        batch.stderr.on('data', (data) => {
-            console.error(`stderr: ${data}`);
+        batch.stderr.on('data', async (data) => {
+            bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: `stderr: ${data}` })
         });
 
-        batch.on('close', (code) => {
-            console.log(`child process exited with code ${code}`);
-
+        batch.on('close', async (code) => {
+            console.log();
+            bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: `child process exited with code ${code}` })
             //FS.emptyDir( dest, ()=>{
             //  FS.copySync('./dist/win-unpacked/' , dest )
             //})
 
-            console.log("application complete ")
 
         });
 
-
-        console.log('Batch file launched!');
     }
 
-    launchBatchFile(process.env.OPEN_BAT);
+    launchBatchFile(process.env.SHADE_BAT);
 
 
 
