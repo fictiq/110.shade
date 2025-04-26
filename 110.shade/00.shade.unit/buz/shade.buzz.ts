@@ -87,7 +87,7 @@ export const openShade = async (cpy: ShadeModel, bal: ShadeBit, ste: State) => {
         console.log('Batch file launched!');
     }
 
-    launchBatchFile(process.env.MQTT_BAT);
+    launchBatchFile(process.env.OPEN_BAT);
 
 
 
