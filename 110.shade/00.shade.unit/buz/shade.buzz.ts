@@ -25,6 +25,8 @@ var once = false
 
 export const initShade = async (cpy: ShadeModel, bal: ShadeBit, ste: State) => {
 
+
+
     if (once == true) return
 
     once = true

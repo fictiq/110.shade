@@ -3,15 +3,35 @@ import * as ActShd from "../../00.shade.unit/shade.action";
 import * as ActVsg from "../../21.visage.unit/visage.action"
 import * as ActVrt from "../../act/vurt.action"
 
-import * as ActTrm from "../../act/terminal.action";
+import * as ActTrm from "../../80.terminal.unit/terminal.action";
+import * as ActChc from "../../85.choice.unit/choice.action";
+
+import * as ActGrd from "../../81.grid.unit/grid.action";
+import * as ActCvs from "../..//82.canvas.unit/canvas.action";
+import * as ActCns from "../../83.console.unit/console.action";
+
+import * as Grid from '../../val/grid';
+import * as Align from '../../val/align'
+import * as Color from '../../val/console-color';
 
 var bit, lst, dex
 
 export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   if (bal == null) bal = { idx: null }
+  
+  bit = await ste.hunt(ActTrm.INIT_TERMINAL, {})
 
-  bit = await ste.bus(ActTrm.INIT_TERMINAL, {})
+  bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 3, y: 0, xSpan: 1, ySpan: 12 })
+  bit = await ste.hunt(ActCvs.WRITE_CANVAS, { idx: 'cvs1', dat: { clr: Color.CYAN, net: bit.grdBit.dat }, })
+
+  bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 4, y: 0, xSpan: 7, ySpan: 12 })
+  bit = await ste.hunt(ActCns.WRITE_CONSOLE, { idx: 'cns00', src: "", dat: { net: bit.grdBit.dat, src: "alligaor0" } })
+
+  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "-----------" })
+  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "Shade PIVOT V0" })
+  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "-----------" })
+
 
   updateMenu(cpy, bal, ste);
 
@@ -21,83 +41,8 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 
-  debugger
-
-  bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "-----------", bit: 'local' })
-
-  bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "SHADE PIVOT V1.1", bit: 'local' })
-  bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "-----------", bit: "local" })
-
-  var lst = [ActShd.UPDATE_SHADE, ActShd.OPEN_SHADE, ActShd.TEST_SHADE,
-  ActShd.RUN_SHADE, ActShd.EDIT_SHADE, ActMnu.CONTAINER_MENU,
-  ActMnu.TEXT_MENU, ActMnu.VISAGE_MENU]
-
-  bit = await ste.bus(ActTrm.UPDATE_TERMINAL, { lst })
-
-  bit = bit.trmBit;
-  var idx = lst[bit.val];
-
-  switch (idx) {
-
-    case ActMnu.TEXT_MENU:
-      bit = await ste.hunt(ActMnu.TEXT_MENU, {})
-      break;
-
-    case ActShd.TEST_SHADE:
-      ste.hunt(ActShd.TEST_SHADE, {})
-      break;
-
-    case ActMnu.CONTAINER_MENU:
-      bit = await ste.hunt(ActMnu.CONTAINER_MENU, {})
-      break;
-
-    case ActMnu.VISAGE_MENU:
-
-      bit = await ste.hunt(ActMnu.VISAGE_MENU, {})
-      break;
-
-    case ActMnu.SHADE_MENU:
-      bit = await ste.hunt(ActMnu.SHADE_MENU, {})
-      break;
-
-    case ActShd.OPEN_SHADE:
-      bit = await ste.hunt(ActShd.OPEN_SHADE, {})
-      break;
-
-    case ActShd.BROWSER_SHADE:
-      bit = await ste.hunt(ActShd.BROWSER_SHADE, {})
-      break;
-
-    case ActShd.RUN_SHADE:
-      bit = await ste.hunt(ActShd.RUN_SHADE, {})
-      break;
-
-    case ActShd.UPDATE_SHADE:
-      bit = await ste.hunt(ActShd.UPDATE_SHADE, {})
-      //bit = await ste.hunt(ActShd.OPEN_SHADE, {})
-      break;
-
-
-    case ActShd.EDIT_SHADE:
-
-      bit = await ste.hunt(ActShd.EDIT_SHADE, {})
-      bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "PATCHING...", bit: 'local' })
-      bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "-----------", bit: "local" })
-
-      lst = [ActShd.PATCH_SHADE]
-
-      bit = await ste.bus(ActTrm.UPDATE_TERMINAL, { lst })
-
-      bit = await ste.hunt(ActShd.PATCH_SHADE, {})
-
-      break;
-
-    default:
-      bit = await await ste.bus(ActTrm.CLOSE_TERMINAL, {})
-      break;
-  }
-
-  updateMenu(cpy, bal, ste);
+ 
+  //updateMenu(cpy, bal, ste);
 
   return cpy;
 };
@@ -108,38 +53,14 @@ export const testMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 export const closeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  await ste.bus(ActTrm.CLOSE_TERMINAL, {})
+  await ste.hunt(ActTrm.CLOSE_TERMINAL, {})
 
   return cpy;
 };
 
 export const shadeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "-----------", bit: 'local' })
-
-  bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "SHADE PIVOT V0", bit: 'local' })
-  bit = await ste.bus(ActTrm.WRITE_TERMINAL, { src: "-----------", bit: "local" })
-
-  var lst = [ActMnu.VISAGE_MENU]
-  bit = await ste.bus(ActTrm.UPDATE_TERMINAL, { lst })
-
-  bit = bit.trmBit;
-  var idx = lst[bit.val];
-
-  switch (idx) {
-
-    case ActMnu.VISAGE_MENU:
-
-      bit = await ste.hunt(ActMnu.VISAGE_MENU, {})
-      break;
-
-    default:
-      bit = await await ste.hunt(ActMnu.UPDATE_MENU, {})
-      break;
-  }
-
-  shadeMenu(cpy, bal, ste)
-
+  
   return cpy;
 };
 
