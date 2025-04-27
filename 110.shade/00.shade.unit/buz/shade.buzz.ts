@@ -84,11 +84,7 @@ export const openShade = async (cpy: ShadeModel, bal: ShadeBit, ste: State) => {
 
     launchBatchFile(process.env.SHADE_BAT);
 
-
-
-
-    if (bal.slv != null) bal.slv({ shdBit: { idx: "open-shade", dat: {} } });
-
+    bal.slv({ shdBit: { idx: "open-shade", dat: {} } });
 
     return cpy;
 };
@@ -116,9 +112,93 @@ export const browserShade = async (cpy: ShadeModel, bal: ShadeBit, ste: State) =
 
 export const updateShade = async (cpy: ShadeModel, bal: ShadeBit, ste: State) => {
 
-    setTimeout(() => {
-        if (bal.slv != null) bal.slv({ shdBit: { idx: "update-shade" } });
-    }, 3);
+
+
+    var unitList = [
+        '00.shade.unit',
+        '02.surface.unit',
+        '03.container.unit',
+        '04.graphic.unit',
+        '05.text.unit',
+        '06.sprite.unit',
+        '07.hexagon.unit',
+        '08.focigon.unit',
+        '09.loop.unit',
+        '10.toon.unit',
+        '11.video.unit',
+        '12.frame.unit',
+        '13.camera.unit',
+        '21.visage.unit',
+        '24.chrome.unit',
+    ]
+
+    const path = require('path');
+    var FS = require('fs-extra')
+
+    var containers = FS.readdirSync('../')
+
+    containers = containers.map(dirName => "../" + dirName);
+    containers = containers.filter(dirName => dirName !== "../110.shade");
+
+    function isDirectorySync(path) {
+        if (!FS.existsSync(path)) {
+            return false; // Path doesn't exist
+        }
+
+        const stats = FS.lstatSync(path);
+        return stats.isDirectory();
+    }
+
+
+    var check = []
+
+    containers.forEach((a) => {
+
+        if (isDirectorySync(a) == false) return
+        check.push(a)
+
+    })
+
+    check
+    var yes = []
+
+    check.forEach((a) => {
+
+        var looking = FS.readdirSync(a)
+
+        looking.forEach((b) => {
+            if (b != '110.shade') return
+            yes.push(a)
+        })
+
+    })
+
+    yes
+    debugger
+
+    yes.forEach((a, b) => {
+
+        var remove = a + '/110.shade'
+        //FS.removeSync(remove);
+
+        bit = ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'removing --- ' + remove })
+
+        unitList.forEach((c) => {
+
+            var dest = a + ''
+
+            var source = './110.shade/' + c;
+            var output = a + '/110.shade/' + c
+
+            bit = ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: source + ' --- ' + output })
+
+            FS.copySync(source, output);
+
+        })
+    })
+
+
+    bal.slv({ shdBit: { idx: "update-shade" } });
 
 
     return cpy;
