@@ -17,6 +17,8 @@
     "websocket-stream": "^5.5.2"
   },
   "dependencies": {
+    "@mantine/core": "^7.17.5",
+    "@mantine/hooks": "^7.17.5",
     "@pixi/ui": "^2.2.0",
     "@tanstack/react-router": "^1.119.0",
     "babylonjs": "^7.50.0",

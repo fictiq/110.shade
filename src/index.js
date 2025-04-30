@@ -9,6 +9,14 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 
 import PixiBlock from '../base/pixi/block'
 
+import '@mantine/core/styles.css';
+
+import { createTheme, MantineProvider } from '@mantine/core';
+
+const theme = createTheme({
+    /** Put your mantine theme override here */
+  });
+
 const routeTree = RouteTree()
 const router = createRouter({
     routeTree,
@@ -23,6 +31,9 @@ root.render(
 
     <React.StrictMode>
         <PixiBlock />
-        <RouterProvider router={router} />
+        <MantineProvider theme={theme}>
+            <RouterProvider router={router} />
+        </MantineProvider>
+
     </React.StrictMode>
 );

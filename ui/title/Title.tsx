@@ -1,52 +1,92 @@
-'use client'
-
 import React from 'react'
-import { useState, useEffect } from 'react';
 
-//const useStyles = createStyles((theme) => ());
-
-
-export default function Component() {
-    //const { classes, cx } = useStyles();
-    const [activeOption, setActiveOption] = useState('GAME');
-    const [flickerOpacity, setFlickerOpacity] = useState(1);
-
-    var actionOne = () => {
-        document.location.href = '/hexmap'
+import { Button } from '@mantine/core';
+import { Box, Title, Text, Stack, Container } from '@mantine/core';
 
 
-    }
-
-    var actionTwo = () => {
-
-        document.location.href = '/scene'
+export default function ContentsPage() {
 
 
-    }
+  return (
+    <Container size="md" p={0} style={{ backgroundColor: '#ab9d77', minHeight: '100vh', color: '#000' }}>
+      <Box p={40}>
+        <Title order={1} style={{ fontSize: 72, fontWeight: 300, marginBottom: 40 }}>
+          110.SHADE
+        </Title>
 
-    var actionThree = () => {
+        <Title order={2} style={{ fontSize: 24, fontWeight: 500, marginBottom: 40 }}>
+          FICTIQ
+        </Title>
 
-        document.location.href = '/camera'
+        <Stack >
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Button fullWidth variant="outline" color="black" > OPEN SURFACE TEST </Button>
+          </Box>
 
 
-    }
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> FICTIQ Online </Text>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> FICTIQ </Text>
+          </Box>
+
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> LIBRARY Online </Text>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> LIBRARY </Text>
+          </Box>
+
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> PIXEL Online </Text>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> PIXEL </Text>
+          </Box>
+
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> Earth Init Test </Text>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> EARTH </Text>
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> Earth Open Test </Text>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> EARTH </Text>
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> Earth Update Test </Text>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> EARTH </Text>
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Button fullWidth variant="outline" color="black" > OPEN KITCHEN </Button>
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Button fullWidth variant="outline" color="black" > CLOSE KITCHEN </Button>
+          </Box>
 
 
 
-    // Film flicker effect
-    useEffect(() => {
-        const flickerInterval = setInterval(() => {
-            const randomOpacity = Math.random() * 0.1 + 0.9; // Between 0.9 and 1.0
-            setFlickerOpacity(randomOpacity);
-        }, 100);
 
-        return () => clearInterval(flickerInterval);
-    }, []);
+        </Stack>
 
-    return (
+        <Box mt={80}>
+          <Title order={3} style={{ fontSize: 18, fontWeight: 600, marginBottom: 16 }}>
+            DISCLAIMER
+          </Title>
+          <Text size="sm" style={{ lineHeight: 1.6 }}>
+          T.A.S.U.S advocates tolerance and international understanding. The game world of T.A.S.U.S has evolved from ours and distorts it into an imaginary future. Conflicts within the game world are, of course, not real - and we do not wish for them to be, either. They only exist for excitement's sake. Although we know this kind of conflict from films, we urge you to use them with caution. None of the seven Cultures mentioned in T.A.S.U.S is better than any of the others. All of those Cultures have an equal right to exist in the game world of T.A.S.U.S. We have actively avoided the term "race" common to RPGs as we deem it discriminatory. We strictly oppose violence and racism. Illustrations of combat action are not meant to promote violence, but to depict a cruel world we should strive to overcome. Culture and civilization are the major goals in T.A.S.U.S, accompanied by hope. We still recommend T.A.S.U.S for people 16+ as we cannot be sure whether our message and our appeal to humanity will be understood.
+          </Text>
+        </Box>
 
-        <div>
-            TITLE
-        </div>
-    );
+        <Box mt={40}>
+          <Text size="sm">ISBN 978-3-9819851-1-5</Text>
+          <Text size="xs" mt={8}>
+            T.A.S.U.S® is ™ Fictiq- LLC. All rights reserved. The mentioning of or reference to companies and products on the following pages constitutes no copyright violation. All names, titles, characters, texts and illustrations in this book are © Fictiq- LLC. All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form by any means, electronic, mechanical, photocopying, recording or otherwise without the prior express permission of the publishers. Character sheets may be copied for personal use only. Printed in the EU.
+          </Text>
+        </Box>
+      </Box>
+    </Container>
+  );
 }
