@@ -25,6 +25,8 @@ export const initSurface = (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
 
 export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
 
+    
+
     if (bal.dat == null) bal.dat = {}
 
     if (bal.dat.src == null) bal.dat.src = 'indexCanvas'
@@ -184,8 +186,6 @@ export const updateSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
 
 export const readSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
 
-    debugger
-
     var slv = bal.slv;
     if (bal.idx == null) bal.idx = 'fce00';
     bit = await ste.hunt(ActCol.READ_COLLECT, { idx: bal.idx, bit: ActFce.CREATE_SURFACE })
@@ -194,8 +194,6 @@ export const readSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State
 
 };
 export const writeSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
-
-    debugger
 
     bit = await ste.hunt(ActCol.WRITE_COLLECT, { idx: bal.idx, dat: bal.dat, bit: ActFce.CREATE_SURFACE })
     ste.hunt(ActFce.UPDATE_SURFACE, { idx: bal.idx })

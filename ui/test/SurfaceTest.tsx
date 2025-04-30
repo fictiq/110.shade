@@ -1,30 +1,40 @@
 
 import React from 'react'
 
-import SurfaceAdd from '../../view/001.SurfaceRemove'
+import SurfaceAdd from '../../view/000.SurfaceAdd'
 import SurfaceRemove from '../../view/001.SurfaceRemove'
+
+var open = false
 
 const Test = (bus) => {
 
+  if ( open == true ){
 
+    setTimeout( ()=>{
 
-  setInterval( ()=>{
+      console.log("rolll")
 
-    setTimeout( ()=> SurfaceAdd('fce00'), 1111)
-    setTimeout( ()=> SurfaceRemove('fce00'), 2111)
+      setTimeout( ()=> SurfaceAdd('fce00', 'surface'), 1111)
+      //setTimeout( ()=> SurfaceRemove('fce00'), 2111)
+  
+  
+    }, 222 )
 
+    return (
+      <div id='surface'>
+        Testing Surface ADD EXIST
+        
+      </div>
+    )
+  
+  }
 
-  }, 2222)
-
+  open = true
   
 
 
+
   
-
-
-
-
-
 
   return (
     <div>
