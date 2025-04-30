@@ -4,9 +4,6 @@ import React from 'react'
 import State from "../../110.shade/99.core/state";
 import * as Import from "../../110.shade/BEE";
 
-import * as ActSld from "../../111.solid/00.solid.unit/solid.action";
-import * as ActBab from "../../111.solid/01.babylon.unit/babylon.action";
-
 import * as ActFce from "../../110.shade/02.surface.unit/surface.action";
 
 
@@ -50,24 +47,26 @@ export default function PixiCanvas() {
 
     window
 
-    setTimeout(async () => {
-        if (typeof window === 'undefined') {
-            return
-        }
+    if ( window['SHADE'] == null ) window['SHADE'] = sim.hunt
 
-        if (once == false) {
-            once = true
-            bit = await sim.hunt( ActFce.CREATE_SURFACE , { src:"surface00" })
-            
-            return
-        }
+    //setTimeout(async () => {
+    //    if (typeof window === 'undefined') {
+    //        return
+    //    }
 
-    }, 333 )
+    //    if (once == false) {
+    //        once = true
+    //        bit = await sim.hunt( ActFce.CREATE_SURFACE , { src:"surface00" })
+
+    //        return
+    //    }
+
+    //}, 333 )
 
 
     return (
         <>
-            
+
         </>
     )
 

@@ -15,7 +15,7 @@ import { createTheme, MantineProvider } from '@mantine/core';
 
 const theme = createTheme({
     /** Put your mantine theme override here */
-  });
+});
 
 const routeTree = RouteTree()
 const router = createRouter({
@@ -30,8 +30,10 @@ const root = createRoot(container)
 root.render(
 
     <React.StrictMode>
+
         <PixiBlock />
         <MantineProvider theme={theme}>
+            
             <RouterProvider router={router} />
         </MantineProvider>
 
