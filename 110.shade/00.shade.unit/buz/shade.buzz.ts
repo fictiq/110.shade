@@ -9,8 +9,6 @@ import * as ActTxt from "../../05.text.unit/text.action";
 import * as ActSpr from "../../06.sprite.unit/sprite.action";
 import * as ActHex from "../../07.hexagon.unit/hexagon.action";
 import * as ActFcg from "../../08.focigon.unit/focigon.action";
-import * as ActCns from "../../83.console.unit/console.action";
-
 
 import * as ActVid from "../../11.video.unit/video.action";
 import * as ActTun from "../../10.toon.unit/toon.action";
@@ -19,6 +17,9 @@ import * as ActSpc from "../../act/space.action"
 import * as ActPvt from "../../act/pivot.action";
 import * as ActVrt from "../../act/vurt.action";
 import * as ActDsk from "../../act/disk.action";
+
+import * as ActCns from "../../act/console.action";
+
 
 
 var bit, val, idx, dex, lst, dat, src;
