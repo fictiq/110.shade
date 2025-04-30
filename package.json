@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@pixi/ui": "^2.2.0",
+    "@tanstack/react-router": "^1.119.0",
     "babylonjs": "^7.50.0",
     "bezier-js": "^6.1.4",
     "blessed": "^0.1.81",
