@@ -1,5 +1,7 @@
 import React from 'react'
 
+import SurfaceTest from "../../../ui/test/SurfaceTest"
+
 /**
  * The main page component that renders the HomePage component.
  *
@@ -7,7 +9,7 @@ import React from 'react'
  */
 const Page = () => {
     
-    return <div> dash </div>;
+    return <SurfaceTest/>;
 };
 
 export default Page;

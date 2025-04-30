@@ -1,5 +1,5 @@
 import IndexPage from '../src/page/000.index/page';
-import DashPage from '../src/page/001.dash/page';
+import TestSurfacePage from '../src/page/001.test-surface/page';
 import TitlePage from '../src/page/002.title/page';
 
 
@@ -45,12 +45,12 @@ const indexRoute = createRoute({
     },
 });
 
-const dashRoute = createRoute({
+const testSurfaceRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: "/welcome",
+    path: "/surface-test",
     component: function Test() {
         return (
-            <DashPage />
+            <TestSurfacePage />
         );
     },
 });
@@ -66,9 +66,10 @@ const titleRoute = createRoute({
     },
 });
 
+
 export var RouteTree = () => {
 
-    var item = rootRoute.addChildren([indexRoute, dashRoute, titleRoute ]);
+    var item = rootRoute.addChildren([indexRoute, testSurfaceRoute, titleRoute ]);
     return item
 
 }

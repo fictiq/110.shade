@@ -1,33 +1,25 @@
 
-import * as ActFce from "@shade/02.surface.unit/surface.action";
-import * as ActTxt from "@shade/05.text.unit/text.action";
-import * as ActCan from "@shade/03.container.unit/container.action";
-import * as ActHex from "@shade/07.hexagon.unit/hexagon.action";
-
-
 import React from 'react'
 
+import SurfaceAdd from '../../view/001.SurfaceRemove'
+import SurfaceRemove from '../../view/001.SurfaceRemove'
 
-
-let hunt;
 const Test = (bus) => {
 
+
+
+  setInterval( ()=>{
+
+    setTimeout( ()=> SurfaceAdd('fce00'), 1111)
+    setTimeout( ()=> SurfaceRemove('fce00'), 2111)
+
+
+  }, 2222)
+
   
 
 
-  var init = async () => {
-
-    
   
-    //var bit = await bus(ActTxt.WRITE_TEXT, { idx: "txt01", dat: { txt: 'testing gator man' } })
-
-
-  }
-
-  init()
-
-
-  //var mech = createMachine(logic)
 
 
 
@@ -36,7 +28,7 @@ const Test = (bus) => {
 
   return (
     <div>
-      Testing gatorman...
+      Testing Surface ADD 
     </div>
   )
 

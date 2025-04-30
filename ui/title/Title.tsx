@@ -6,6 +6,10 @@ import { Box, Title, Text, Stack, Container } from '@mantine/core';
 
 export default function ContentsPage() {
 
+  var actionOne = () => {
+    document.location.href = './surface-test'
+  }
+
 
   return (
     <Container size="md" p={0} style={{ backgroundColor: '#ab9d77', minHeight: '100vh', color: '#000' }}>
@@ -21,7 +25,7 @@ export default function ContentsPage() {
         <Stack >
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <Button fullWidth variant="outline" color="black" > OPEN SURFACE TEST </Button>
+            <Button fullWidth variant="outline" color="black" onClick={actionOne} > OPEN SURFACE TEST </Button>
           </Box>
 
 
@@ -76,7 +80,7 @@ export default function ContentsPage() {
             DISCLAIMER
           </Title>
           <Text size="sm" style={{ lineHeight: 1.6 }}>
-          T.A.S.U.S advocates tolerance and international understanding. The game world of T.A.S.U.S has evolved from ours and distorts it into an imaginary future. Conflicts within the game world are, of course, not real - and we do not wish for them to be, either. They only exist for excitement's sake. Although we know this kind of conflict from films, we urge you to use them with caution. None of the seven Cultures mentioned in T.A.S.U.S is better than any of the others. All of those Cultures have an equal right to exist in the game world of T.A.S.U.S. We have actively avoided the term "race" common to RPGs as we deem it discriminatory. We strictly oppose violence and racism. Illustrations of combat action are not meant to promote violence, but to depict a cruel world we should strive to overcome. Culture and civilization are the major goals in T.A.S.U.S, accompanied by hope. We still recommend T.A.S.U.S for people 16+ as we cannot be sure whether our message and our appeal to humanity will be understood.
+            T.A.S.U.S advocates tolerance and international understanding. The game world of T.A.S.U.S has evolved from ours and distorts it into an imaginary future. Conflicts within the game world are, of course, not real - and we do not wish for them to be, either. They only exist for excitement's sake. Although we know this kind of conflict from films, we urge you to use them with caution. None of the seven Cultures mentioned in T.A.S.U.S is better than any of the others. All of those Cultures have an equal right to exist in the game world of T.A.S.U.S. We have actively avoided the term "race" common to RPGs as we deem it discriminatory. We strictly oppose violence and racism. Illustrations of combat action are not meant to promote violence, but to depict a cruel world we should strive to overcome. Culture and civilization are the major goals in T.A.S.U.S, accompanied by hope. We still recommend T.A.S.U.S for people 16+ as we cannot be sure whether our message and our appeal to humanity will be understood.
           </Text>
         </Box>
 
