@@ -107,13 +107,13 @@ const init = async (prt) => {
     //SPACE = require(path.resolve('./002.space/index'));
     //SPACE_ACTION = require(path.resolve('./002.space/00.space.unit/space.action'));
 
-    PIVOT = require(path.resolve('./999.pivot/index'));
-    PIVOT_ACTION = require(path.resolve('./999.pivot/00.pivot.unit/pivot.action'));
+    //PIVOT = require(path.resolve('./999.pivot/index'));
+    //PIVOT_ACTION = require(path.resolve('./999.pivot/00.pivot.unit/pivot.action'));
 
 
     if ( pvt == false){
 
-      await PIVOT.hunt( PIVOT_ACTION.INIT_PIVOT, {  dat: MQTT, src: local });
+      //await PIVOT.hunt( PIVOT_ACTION.INIT_PIVOT, {  dat: MQTT, src: local });
       //await SPACE.hunt( SPACE_ACTION.INIT_SPACE, {  dat: MQTT, src: local });
       await SHADE.hunt( SHADE_ACTION.INIT_SHADE , { val: 1, dat: MQTT, src:  [localBit]  });
 

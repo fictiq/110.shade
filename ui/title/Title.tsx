@@ -6,8 +6,11 @@ import { Box, Title, Text, Stack, Container } from '@mantine/core';
 
 export default function ContentsPage() {
 
-  var actionOne = () => {
+  var act00 = () => {
     document.location.href = './surface-test'
+  }
+  var act00 = () => {
+    document.location.href = './write-spritesheet-test'
   }
 
 
@@ -25,13 +28,12 @@ export default function ContentsPage() {
         <Stack >
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <Button fullWidth variant="outline" color="black" onClick={actionOne} > OPEN SURFACE TEST </Button>
+            <Button fullWidth variant="outline" color="black" onClick={act00 } > OPEN SURFACE TEST </Button>
           </Box>
 
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <Text style={{ fontSize: 18, fontWeight: 400 }}> FICTIQ Online </Text>
-            <Text style={{ fontSize: 18, fontWeight: 400 }}> FICTIQ </Text>
+          <Button fullWidth variant="outline" color="black" onClick={act00 } > WRITE SPRITESHEET TEST </Button>
           </Box>
 
 

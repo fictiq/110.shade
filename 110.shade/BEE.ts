@@ -13,6 +13,7 @@ import ToonUnit from "./10.toon.unit/toon.unit";
 import VideoUnit from "./11.video.unit/video.unit";
 import FrameUnit from "./12.frame.unit/frame.unit";
 import CameraUnit from "./13.camera.unit/camera.unit";
+import SpritesheetUnit from "./15.spritesheet.unit/spritesheet.unit";
 import VisageUnit from "./21.visage.unit/visage.unit";
 import ChromeUnit from "./24.chrome.unit/chrome.unit";
 import TerminalUnit from "./80.terminal.unit/terminal.unit";
@@ -57,6 +58,8 @@ import Frame from "./12.frame.unit/fce/frame.interface";
 import { FrameModel } from "./12.frame.unit/frame.model";
 import Camera from "./13.camera.unit/fce/camera.interface";
 import { CameraModel } from "./13.camera.unit/camera.model";
+import Spritesheet from "./15.spritesheet.unit/fce/spritesheet.interface";
+import { SpritesheetModel } from "./15.spritesheet.unit/spritesheet.model";
 import Visage from "./21.visage.unit/fce/visage.interface";
 import { VisageModel } from "./21.visage.unit/visage.model";
 import Chrome from "./24.chrome.unit/fce/chrome.interface";
@@ -91,7 +94,7 @@ import Bus from "./99.bus.unit/fce/bus.interface";
 import { BusModel } from "./99.bus.unit/bus.model";
 
 
-export const list: Array<any> = [ShadeUnit,SurfaceUnit,ContainerUnit,GraphicUnit,TextUnit,SpriteUnit,HexagonUnit,FocigonUnit,LoopUnit,ToonUnit,VideoUnit,FrameUnit,CameraUnit,VisageUnit,ChromeUnit,TerminalUnit,GridUnit,CanvasUnit,ConsoleUnit,InputUnit,ChoiceUnit,ContainerUnit,GraphicUnit,HexagonUnit,SpriteUnit,TextUnit,CollectUnit,MenuUnit,BusUnit];
+export const list: Array<any> = [ShadeUnit,SurfaceUnit,ContainerUnit,GraphicUnit,TextUnit,SpriteUnit,HexagonUnit,FocigonUnit,LoopUnit,ToonUnit,VideoUnit,FrameUnit,CameraUnit,SpritesheetUnit,VisageUnit,ChromeUnit,TerminalUnit,GridUnit,CanvasUnit,ConsoleUnit,InputUnit,ChoiceUnit,ContainerUnit,GraphicUnit,HexagonUnit,SpriteUnit,TextUnit,CollectUnit,MenuUnit,BusUnit];
 
 import * as reduceFromShade from "./00.shade.unit/shade.reduce";
 import * as reduceFromSurface from "./02.surface.unit/surface.reduce";
@@ -106,6 +109,7 @@ import * as reduceFromToon from "./10.toon.unit/toon.reduce";
 import * as reduceFromVideo from "./11.video.unit/video.reduce";
 import * as reduceFromFrame from "./12.frame.unit/frame.reduce";
 import * as reduceFromCamera from "./13.camera.unit/camera.reduce";
+import * as reduceFromSpritesheet from "./15.spritesheet.unit/spritesheet.reduce";
 import * as reduceFromVisage from "./21.visage.unit/visage.reduce";
 import * as reduceFromChrome from "./24.chrome.unit/chrome.reduce";
 import * as reduceFromTerminal from "./80.terminal.unit/terminal.reduce";
@@ -138,6 +142,7 @@ toon : reduceFromToon.reducer,
 video : reduceFromVideo.reducer, 
 frame : reduceFromFrame.reducer, 
 camera : reduceFromCamera.reducer, 
+spritesheet : reduceFromSpritesheet.reducer, 
 visage : reduceFromVisage.reducer, 
 chrome : reduceFromChrome.reducer, 
 terminal : reduceFromTerminal.reducer, 
@@ -172,6 +177,7 @@ toon : Toon = new ToonModel();
 video : Video = new VideoModel();
 frame : Frame = new FrameModel();
 camera : Camera = new CameraModel();
+spritesheet : Spritesheet = new SpritesheetModel();
 visage : Visage = new VisageModel();
 chrome : Chrome = new ChromeModel();
 terminal : Terminal = new TerminalModel();
