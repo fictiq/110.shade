@@ -1,6 +1,7 @@
 import IndexPage from '../src/page/000.index/page';
-import TestSurfacePage from '../src/page/001.test-surface/page';
 import TitlePage from '../src/page/002.title/page';
+
+import TestSurfacePage from '../src/page/001.test-surface/page';
 
 
 import {
@@ -65,6 +66,18 @@ const titleRoute = createRoute({
         );
     },
 });
+
+const testWriteSpritesheet = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/write-spritesheet-test",
+    component: function Test() {
+        return (
+            <TitlePage />
+        );
+    },
+});
+
+
 
 
 export var RouteTree = () => {
