@@ -1,7 +1,7 @@
 import IndexPage from '../src/page/000.index/page';
-import TitlePage from '../src/page/002.title/page';
+import TitlePage from '../src/page/001.title/page';
 
-import TestSurfacePage from '../src/page/001.test-surface/page';
+import TestSurfacePage from '../src/page/002.test-surface/page';
 
 
 import {
