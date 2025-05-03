@@ -36,12 +36,12 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
 
     dat.app = app
 
-    debugger
+    
 
-    var el: HTMLElement | null = document.getElementById(dat.src as string)
+    //var el: HTMLElement | null = document.getElementById(dat.src as string)
 
-    const width = 1280;
-    const height = 720;
+    //const width = 1280;
+    //const height = 720;
 
     //const width = 720;
     //const height = 1280;
@@ -49,7 +49,7 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //app.init
     await app.init({ background: '#00FFFF',  resizeTo: window });
 
-    debugger
+    //debugger
 
     //  await app.init({ background: '#00FFFF', resizeTo: el.parentElement });
 
@@ -58,23 +58,21 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //if (el != null) el.appendChild(app.canvas);
 
     // Create and add a container to the stage
-    bit = await ste.hunt(ActCan.WRITE_CONTAINER, { idx: 'can-00' })
-    dat = bit.canBit.dat;
+    //bit = await ste.hunt(ActCan.WRITE_CONTAINER, { idx: 'can-00' })
+    //dat = bit.canBit.dat;
 
-    debugger
+    //debugger
 
-    var container = dat['bit']
-    app.stage.addChild(container);
+    //var container = dat['bit']
+    //app.stage.addChild(container);
 
-    bit = await ste.hunt(ActGph.WRITE_GRAPHIC, { idx: 'gph-00' })
-    dat = bit.gphBit.dat;
-    var graphic = dat['bit']
-    container.addChild(graphic)
+    //bit = await ste.hunt(ActGph.WRITE_GRAPHIC, { idx: 'gph-00' })
+    //dat = bit.gphBit.dat;
+    //var graphic = dat['bit']
+    //container.addChild(graphic)
 
-    graphic.rect(0, 0, 200, 100)
-    graphic.fill(0x0ff00);
-
-    debugger
+    //graphic.rect(0, 0, 200, 100)
+    //graphic.fill(0x0ff00);
 
     //container.x = app.screen.width / 2;
     //container.y = app.screen.height / 2;
@@ -83,22 +81,20 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //container.pivot.x = container.width / 2;
     //container.pivot.y = container.height / 2;
 
-    const texture = await Assets.load('https://pixijs.com/assets/bunny.png');
+    //const texture = await Assets.load('https://pixijs.com/assets/bunny.png');
 
     // Create a bunny Sprite
-    const bunny = new Sprite(texture);
+    //const bunny = new Sprite(texture);
 
     // Center the sprite's anchor point
-    bunny.anchor.set(0.5);
+    //bunny.anchor.set(0.5);
 
     // Move the sprite to the center of the screen
-    bunny.x = app.screen.width / 2;
-    bunny.y = app.screen.height / 2;
+    //bunny.x = app.screen.width / 2;
+    //bunny.y = app.screen.height / 2;
 
-    app.stage.addChild(bunny);
-
-    debugger
-
+    //app.stage.addChild(bunny);
+    
     //await Assets.load([
     //    "./sprite/000/000.json"
     //]);
@@ -107,71 +103,10 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
 
     //debugger
 
-
-
-
     //container.addChild( button)
     //app.stage.addChild( button)
     //button.onPress.connect(() => console.log('Button pressed!'));
 
-
-
-    if (testing == true) {
-
-
-
-        bit = await ste.hunt(ActTxt.WRITE_TEXT, { idx: 'txt-00' })
-        dat = bit.txtBit.dat;
-
-        var text = dat['bit']
-        container.addChild(text)
-
-        var asset = 'https://avatar.iran.liara.run/public/11.png'
-        bit = await ste.hunt(ActSpr.WRITE_SPRITE, { idx: 'spr-00', src: asset, dat: { x: 10, y: 100 } })
-        dat = bit.sprBit.dat;
-        var sprite = dat['bit']
-        container.addChild(sprite)
-
-        var asset = 'https://avatar.iran.liara.run/public/10.png'
-        bit = await ste.hunt(ActSpr.WRITE_SPRITE, { idx: 'spr-01', src: asset })
-        dat = bit.sprBit.dat;
-        var sprite = dat['bit']
-        container.addChild(sprite)
-
-        bit = await ste.hunt(ActSpr.WRITE_SPRITE, { idx: 'spr-01', dat: { y: 10, x: 444 } })
-
-
-        // Create a 5x5 grid of bunnies in the container
-        // for (let i = 0; i < 25; i++) {
-        //     const bunny = new Sprite(texture);
-
-        //    bunny.x = (i % 5) * 40;
-        //   bunny.y = Math.floor(i / 5) * 40;
-        //  container.addChild(bunny);
-        // }
-
-        // Move the container to the center
-
-        // Listen for animate update
-    }
-
-
-    app.ticker.add((time) => {
-        // Continuously rotate the container!
-        // * use delta to create frame-independent transform *
-        //container.rotation -= 0.01 * time.deltaTime;
-
-        //container.x = app.screen.width / 2 + 300;
-        //container.y = app.screen.height / 2;
-
-        // Center the bunny sprites in local container coordinates
-        //container.pivot.x = container.width / 2;
-        //container.pivot.y = container.height / 2;
-
-    });
-
-
-    debugger
     bal.slv({ fceBit: { idx: "create-surface" } });
 
     return cpy;
