@@ -26,7 +26,6 @@ export const initSurface = (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
 export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
 
 
-
     if (bal.dat == null) bal.dat = {}
 
     if (bal.dat.src == null) bal.dat.src = 'indexCanvas'
@@ -37,6 +36,8 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
 
     dat.app = app
 
+    debugger
+
     var el: HTMLElement | null = document.getElementById(dat.src as string)
 
     const width = 1280;
@@ -45,17 +46,22 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //const width = 720;
     //const height = 1280;
 
-    await app.init({ background: '#00FFFF', width, height });
+    //app.init
+    await app.init({ background: '#00FFFF',  resizeTo: window });
+
+    debugger
 
     //  await app.init({ background: '#00FFFF', resizeTo: el.parentElement });
 
     // Append the application canvas to the document body
 
-    if (el != null) el.appendChild(app.canvas);
+    //if (el != null) el.appendChild(app.canvas);
 
     // Create and add a container to the stage
     bit = await ste.hunt(ActCan.WRITE_CONTAINER, { idx: 'can-00' })
     dat = bit.canBit.dat;
+
+    debugger
 
     var container = dat['bit']
     app.stage.addChild(container);
@@ -67,6 +73,8 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
 
     graphic.rect(0, 0, 200, 100)
     graphic.fill(0x0ff00);
+
+    debugger
 
     //container.x = app.screen.width / 2;
     //container.y = app.screen.height / 2;
@@ -88,6 +96,8 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     bunny.y = app.screen.height / 2;
 
     app.stage.addChild(bunny);
+
+    debugger
 
     //await Assets.load([
     //    "./sprite/000/000.json"
@@ -161,6 +171,7 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     });
 
 
+    debugger
     bal.slv({ fceBit: { idx: "create-surface" } });
 
     return cpy;
@@ -194,6 +205,8 @@ export const readSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State
 
 };
 export const writeSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
+
+    
 
     bit = await ste.hunt(ActCol.WRITE_COLLECT, { idx: bal.idx, dat: bal.dat, bit: ActFce.CREATE_SURFACE })
     ste.hunt(ActFce.UPDATE_SURFACE, { idx: bal.idx })
@@ -298,7 +311,10 @@ export const listSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State
 
     //if (bal.idx != null) process.chdir(bal.idx)
 
-    if (bal.slv != null) bal.slv({ mapBit: { idx: "list-hexmap", lst } });
+    
+    //var dex = lst.length()
+
+    bal.slv({ fceBit: { idx: "list-surface", lst} });
 
 
 

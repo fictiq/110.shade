@@ -10,15 +10,32 @@ export function useWriteSurface(idx) {
           if ( idx != null ){
             bit =  await window['SHADE']( ActFce.WRITE_SURFACE, { idx })
           }else{
-            //bit =  await window['SHADE']( ActFce, { idx })
-
+            bit =  await window['SHADE']( ActFce.LIST_SURFACE, {})
+            var dex = bit.fceBit.lst.length
+            var idx = 'fce' + dex;
+            console.log("fce: " + idx )
+            bit =  await window['SHADE']( ActFce.WRITE_SURFACE, { idx })
+            console.log("fce: " + JSON.stringify(bit) )
+            
           }
 
 
             return bit
 
         },
+
         queryKey: ['writeSurface']
     })
 }
 
+
+export function useListSurface() {
+  return useQuery({
+      queryFn: async () => {
+        let bit =  await window['SHADE']( ActFce.LIST_SURFACE, {})
+        return bit
+
+      },
+      queryKey: ['listSurface']
+  })
+}

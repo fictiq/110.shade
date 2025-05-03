@@ -3,6 +3,8 @@ import React from 'react'
 import { Button } from '@mantine/core';
 import { Box, Title, Text, Stack, Container } from '@mantine/core';
 
+import SurfaceListTest from '../test/SurfaceListTest'
+import SurfaceWriteTest from '../test/SurfaceWriteTest'
 
 export default function ContentsPage() {
 
@@ -38,14 +40,14 @@ export default function ContentsPage() {
 
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <Text style={{ fontSize: 18, fontWeight: 400 }}> LIBRARY Online </Text>
-            <Text style={{ fontSize: 18, fontWeight: 400 }}> LIBRARY </Text>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> Surface List </Text>
+            <SurfaceListTest/>
           </Box>
 
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <Text style={{ fontSize: 18, fontWeight: 400 }}> PIXEL Online </Text>
-            <Text style={{ fontSize: 18, fontWeight: 400 }}> PIXEL </Text>
+            <Text style={{ fontSize: 18, fontWeight: 400 }}> Surface Write </Text>
+            <SurfaceWriteTest/>
           </Box>
 
 
