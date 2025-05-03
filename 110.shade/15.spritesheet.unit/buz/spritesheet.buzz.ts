@@ -3,6 +3,7 @@ import { SpritesheetModel } from "../spritesheet.model";
 import SpritesheetBit from "../fce/spritesheet.bit";
 import State from "../../99.core/state";
 
+import { Container, AnimatedSprite, Texture, Spritesheet, Assets, Sprite } from 'pixi.js';
 
 import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActSsh from "../spritesheet.action";
@@ -72,7 +73,7 @@ export const deleteSpritesheet = (cpy: SpritesheetModel, bal: SpritesheetBit, st
     return cpy;
 };
 
-export const createSpritesheet = (cpy: SpritesheetModel, bal: SpritesheetBit, ste: State) => {
+export const createSpritesheet = async (cpy: SpritesheetModel, bal: SpritesheetBit, ste: State) => {
 
 
     var dat: SheetBit = { idx: bal.idx, src: bal.src, bit:null  }
