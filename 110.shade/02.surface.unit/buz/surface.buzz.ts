@@ -30,11 +30,13 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
 
     if (bal.dat.src == null) bal.dat.src = 'indexCanvas'
 
-    var dat: StageBit = { idx: bal.idx, src: bal.dat.src, app: null };
+    var dat: StageBit = { idx: bal.idx, src: bal.dat.src, bit: null };
 
-    const app = new Application();
+    
+    dat.bit = new Application();
 
-    dat.app = app
+    
+    bal.slv({ fceBit: { idx: "create-surface", dat } });
 
     
 
@@ -47,7 +49,7 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //const height = 1280;
 
     //app.init
-    await app.init({ background: '#00FFFF',  resizeTo: window });
+    //await app.init({ background: '#00FFFF',  resizeTo: window });
 
     //debugger
 
@@ -107,7 +109,7 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //app.stage.addChild( button)
     //button.onPress.connect(() => console.log('Button pressed!'));
 
-    bal.slv({ fceBit: { idx: "create-surface" } });
+    bal.slv({ fceBit: { idx: "create-surface", dat:{bit:app} } });
 
     return cpy;
 };

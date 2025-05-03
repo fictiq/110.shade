@@ -7,5 +7,5 @@ export default interface StageBit {
     width?: number;
     height?: number;
     dex?: number;
-    app?: PIXI.Application | null;
+    bit?: PIXI.Application | null;
 }
