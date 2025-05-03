@@ -7,10 +7,6 @@ import StageBit from "../fce/stage.bit";
 
 import { Application, Assets, Container, Sprite } from 'pixi.js';
 
-export const listSurface = (cpy: SurfaceModel, bal:SurfaceBit, ste: State) => {
- debugger
- return cpy;
- };
 import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActFce from "../../02.surface.unit/surface.action";
 import * as ActCan from "../../03.container.unit/container.action";
@@ -29,7 +25,7 @@ export const initSurface = (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
 
 export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
 
-    
+
 
     if (bal.dat == null) bal.dat = {}
 
@@ -103,7 +99,7 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
 
 
 
-    
+
     //container.addChild( button)
     //app.stage.addChild( button)
     //button.onPress.connect(() => console.log('Button pressed!'));
@@ -262,6 +258,53 @@ export const extractSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: St
 
     return cpy;
 };
+
+
+export const listSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: State) => {
+
+    dat = null
+
+    bit = await ste.hunt(ActCol.FETCH_COLLECT, { val: 0, bit: ActFce.CREATE_SURFACE })
+
+
+    if (bit.clcBit.dat == null) lst = []
+    else dat = bit.clcBit.dat;
+
+    dat
+
+
+    if (dat != null) {
+
+        lst = []
+
+        dat.bitList.forEach((a) => {
+
+            lst.push((a.idx))
+        })
+    }
+
+    lst
+
+
+
+
+
+    //process.chdir("../002.space")
+
+    //src = cpy.hexmapLoc
+    //bit = await ste.bus(ActDsk.LIST_DISK, { idx: null, src })
+
+    //lst = bit.dskBit.lst
+
+    //if (bal.idx != null) process.chdir(bal.idx)
+
+    if (bal.slv != null) bal.slv({ mapBit: { idx: "list-hexmap", lst } });
+
+
+
+    return cpy;
+};
+
 
 
 
