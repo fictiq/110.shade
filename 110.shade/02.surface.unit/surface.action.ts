@@ -57,6 +57,12 @@ export const EXTRACT_SURFACE = "[Extract action] Extract Surface";
  constructor(public bale: SurfaceBit) {}
  }
  
+export const LIST_SURFACE = "[List action] List Surface";
+ export class ListSurface implements Action {
+ readonly type = LIST_SURFACE;
+ constructor(public bale: SurfaceBit) {}
+ }
+ 
 export type Actions = | InitSurface | UpdateSurface 
 | ReadSurface
 | WriteSurface
@@ -65,3 +71,4 @@ export type Actions = | InitSurface | UpdateSurface
 | DeleteSurface
 | RemoveSurface
 | ExtractSurface
+| ListSurface

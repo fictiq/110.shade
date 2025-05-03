@@ -7,6 +7,10 @@ import StageBit from "../fce/stage.bit";
 
 import { Application, Assets, Container, Sprite } from 'pixi.js';
 
+export const listSurface = (cpy: SurfaceModel, bal:SurfaceBit, ste: State) => {
+ debugger
+ return cpy;
+ };
 import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActFce from "../../02.surface.unit/surface.action";
 import * as ActCan from "../../03.container.unit/container.action";

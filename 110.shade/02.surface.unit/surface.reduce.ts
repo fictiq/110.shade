@@ -34,6 +34,9 @@ export function reducer(model: SurfaceModel = new SurfaceModel(), act: Act.Actio
 case Act.EXTRACT_SURFACE:
  return Buzz.extractSurface(clone(model), act.bale, state);
  
+case Act.LIST_SURFACE:
+ return Buzz.listSurface(clone(model), act.bale, state);
+ 
         default:
             return model;
     }

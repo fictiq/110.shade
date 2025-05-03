@@ -7,3 +7,4 @@ export { dimensionSurface  } from "./buz/surface.buzz";
 export { deleteSurface  } from "./buz/surface.buzz";
 export { removeSurface  } from "./buz/surface.buzz";
 export { extractSurface  } from "./buz/surface.buzz";
+export { listSurface  } from "./buz/surface.buzz";
