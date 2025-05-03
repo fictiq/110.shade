@@ -13,6 +13,9 @@ import '@mantine/core/styles.css';
 
 import { createTheme, MantineProvider } from '@mantine/core';
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+
 const theme = createTheme({
     /** Put your mantine theme override here */
 });
@@ -25,6 +28,9 @@ const router = createRouter({
 });
 
 
+const queryClient = new QueryClient();
+
+
 const container = document.getElementById("app");
 const root = createRoot(container)
 root.render(
@@ -33,8 +39,9 @@ root.render(
 
         <PixiBlock />
         <MantineProvider theme={theme}>
-            
+        <QueryClientProvider client={queryClient}>
             <RouterProvider router={router} />
+            </QueryClientProvider>
         </MantineProvider>
 
     </React.StrictMode>
