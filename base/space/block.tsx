@@ -1,10 +1,7 @@
 import React from 'react'
 
-import State from "../../111.solid/99.core/state";
-import * as Import from "../../111.solid/BEE";
-
-import * as ActSld from "../../111.solid/00.solid.unit/solid.action";
-import * as ActBab from "../../111.solid/01.babylon.unit/babylon.action";
+import State from "../../002.space/99.core/state";
+import * as Import from "../../002.space/BEE";
 
 var once = false
 
@@ -40,7 +37,7 @@ export default function SolidPivot() {
         for (var k in Import.list) new Import.list[k](sim.state);
     };
 
-    window['SOLID'] = sim.hunt
+    window['SPACE'] = sim.hunt
 
     return (
         <>
