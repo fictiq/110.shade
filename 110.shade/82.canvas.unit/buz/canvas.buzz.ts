@@ -1,6 +1,6 @@
 import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActCvs from "../../82.canvas.unit/canvas.action";
-import * as ActTxt from "../../90.text.unit/text.action";
+//import * as ActTxt from "../../90.text.unit/text.action";
 
 var lst, bit, dat;
 
@@ -25,11 +25,11 @@ export const updateCanvas = async (cpy: CanvasModel, bal: CanvasBit, ste: State)
     let canvas = dat.bit;
     let ctx = canvas.ctx;
 
-    dat.txtLst.forEach((a) => {
+    //dat.txtLst.forEach((a) => {
 
-        ste.hunt(ActTxt.UPDATE_TEXT, { idx: a })
+    //    ste.hunt(ActTxt.UPDATE_TEXT, { idx: a })
 
-    })
+    //})
 
     if (bal.slv != null) bal.slv({ cvsBit: { idx: "update-canvas", dat } });
 

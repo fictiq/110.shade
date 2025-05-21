@@ -109,7 +109,7 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //app.stage.addChild( button)
     //button.onPress.connect(() => console.log('Button pressed!'));
 
-    bal.slv({ fceBit: { idx: "create-surface", dat:{bit:app} } });
+    //bal.slv({ fceBit: { idx: "create-surface", dat:{bit:app} } });
 
     return cpy;
 };

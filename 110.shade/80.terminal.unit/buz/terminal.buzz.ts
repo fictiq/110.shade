@@ -1,7 +1,7 @@
 import * as ActPut from "../../84.input.unit/input.action";
 import * as ActChc from "../../85.choice.unit/choice.action";
 import * as ActCvs from "../../82.canvas.unit/canvas.action";
-import * as ActTxt from "../../90.text.unit/text.action";
+//import * as ActTxt from "../../90.text.unit/text.action";
 import * as ActGrd from "../../81.grid.unit/grid.action";
 import * as ActCns from "../../83.console.unit/console.action";
 
@@ -23,7 +23,7 @@ export const initTerminal = async (cpy: TerminalModel, bal: TerminalBit, ste: St
   if ( firstLoad == true ) return
   firstLoad = true
 
-  if (bal.dat != null) bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, lst: [ActTrm, ActChc, ActTxt, ActCvs, ActPut, ActGrd, ActCns ], dat: bal.dat, src: bal.src })
+  if (bal.dat != null) bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, lst: [ActTrm, ActChc,  ActCvs, ActPut, ActGrd, ActCns ], dat: bal.dat, src: bal.src })
 
   bit = await ste.hunt( ActTrm.OPEN_TERMINAL, {} ) 
 

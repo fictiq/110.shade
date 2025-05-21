@@ -7,7 +7,7 @@ import App from "./App";
 import { RouteTree } from "../router/RouteTree"
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
-import PixiBlock from '../base/pixi/block'
+import ShadeBlock from '../base/shade/block'
 
 import '@mantine/core/styles.css';
 
@@ -37,7 +37,7 @@ root.render(
 
     <React.StrictMode>
 
-        <PixiBlock />
+        <ShadeBlock />
         <MantineProvider theme={theme}>
         <QueryClientProvider client={queryClient}>
             <RouterProvider router={router} />
